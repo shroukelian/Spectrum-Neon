@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" id="mainHtml">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الحديد والألمنيوم | نيون الطيف</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body class="inner-page">
 
-     <header class="main-header">
+    <header class="main-header">
         <div class="container navbar">
             <div class="logo" onclick="location.href='index.html'">
                 <img src="images/logo.png" alt="نيون الطيف">
@@ -16,26 +19,44 @@
                     <h1>نيون الطيف</h1><span>للمقاولات</span>
                 </div>
             </div>
-            <nav id="nav-menu">
+          <nav id="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html" class="lang-ar">الرئيسية</a><a href="index.html" class="lang-en">Home</a>
+                    </li>
+                    <li><a href="#about" class="lang-ar">من نحن</a><a href="about.html" class="lang-en">About</a>
+                    </li>
+
+                    <!-- قائمة الخدمات المنسدلة -->
                     <li class="dropdown">
-                        <a href="#" class="active">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <a href="#services" class="dropbtn lang-ar">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <a href="#services" class="dropbtn lang-en">Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="general-contracting.html">المقاولات العامة</a></li>
                             <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
                             <li><a href="decoration.html">أعمال الديكورات</a></li>
                             <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                            <li><a href="exterior-finishing.html">التشطيبات الخارجية</a></li>
+                            <li><a href="electrical-works.html">أعمال الكهرباء</a></li>
+                            <li><a href="plumbing-works.html">أعمال السباكة</a></li>
+                            <li><a href="hvac.html">أعمال التكييف</a></li>
+                            <li><a href="fire-safety.html">السلامة ومكافحة الحريق</a></li>
+                            <li><a href="security-systems.html">الأنظمة الأمنية</a></li>
+                            <li><a href="infrastructure.html">الطرق والبنية التحتية</a></li>
+                            <li><a href="landscaping.html">الحدائق واللاندسكيب</a></li>
+                            <li><a href="steel-aluminum.html">الحديد والألمنيوم</a></li>
+                            <li><a href="maintenance.html">الصيانة والتشغيل</a></li>
+                            <li><a href="specialized-works.html">أعمال متخصصة</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#vision">رؤية 2030</a></li>
+
                     <li><button id="langSwitcher" class="lang-btn">English</button></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <section class="inner-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000') center/cover;">
+    <section class="inner-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000') center/cover;">
         <div class="container">
             <h1 class="lang-ar">أعمال الحديد والألمنيوم</h1>
             <h1 class="lang-en">Steel & Aluminum Works</h1>
@@ -46,16 +67,24 @@
         <div class="service-desc-box reveal active">
             <h2 class="lang-ar">متانة البناء <span class="gold-text">ودقة التفاصيل</span></h2>
             <h2 class="lang-en">Construction <span class="gold-text">Durability & Precision</span></h2>
-            <p class="lang-ar">تنفيذ جميع الهياكل المعدنية والأبواب والنوافذ والتشطيبات المعدنية بأعلى معايير الجودة والمتانة والسلامة.</p>
-            <p class="lang-en">Execution of all metal structures, doors, windows, and finishes with the highest standards of durability.</p>
-            
+            <p class="lang-ar">تنفيذ جميع الهياكل المعدنية والأبواب والنوافذ والتشطيبات المعدنية بأعلى معايير الجودة
+                والمتانة والسلامة.</p>
+            <p class="lang-en">Execution of all metal structures, doors, windows, and finishes with the highest
+                standards of durability.</p>
+
             <ul class="service-list">
-                <li><i class="fas fa-door-open"></i> <span class="lang-ar">توريد وتركيب أبواب ونوافذ الألمنيوم</span><span class="lang-en">Aluminum Doors & Windows Supply</span></li>
-                <li><i class="fas fa-stairs"></i> <span class="lang-ar">تنفيذ الدرابزين والسلالم المعدنية الفاخرة</span><span class="lang-en">Handrails & Metal Stairs</span></li>
-                <li><i class="fas fa-umbrella"></i> <span class="lang-ar">تصميم وتركيب المظلات المعدنية والخفيفة</span><span class="lang-en">Metal & Lightweight Shade Canopies</span></li>
-                <li><i class="fas fa-warehouse"></i> <span class="lang-ar">إنشاء الهياكل المعدنية (Steel Structure) للمباني</span><span class="lang-en">Steel Structure Construction</span></li>
-                <li><i class="fas fa-shield-alt"></i> <span class="lang-ar">توريد وتركيب الأبواب الحديدية بكافة أنواعها</span><span class="lang-en">All Types of Iron Doors</span></li>
-                <li><i class="fas fa-window-maximize"></i> <span class="lang-ar">تركيب الشتر والنوافذ من مواد UPVC</span><span class="lang-en">UPVC Windows & Rolling Shutters</span></li>
+                <li><i class="fas fa-door-open"></i> <span class="lang-ar">توريد وتركيب أبواب ونوافذ
+                        الألمنيوم</span><span class="lang-en">Aluminum Doors & Windows Supply</span></li>
+                <li><i class="fas fa-stairs"></i> <span class="lang-ar">تنفيذ الدرابزين والسلالم المعدنية
+                        الفاخرة</span><span class="lang-en">Handrails & Metal Stairs</span></li>
+                <li><i class="fas fa-umbrella"></i> <span class="lang-ar">تصميم وتركيب المظلات المعدنية
+                        والخفيفة</span><span class="lang-en">Metal & Lightweight Shade Canopies</span></li>
+                <li><i class="fas fa-warehouse"></i> <span class="lang-ar">إنشاء الهياكل المعدنية (Steel Structure)
+                        للمباني</span><span class="lang-en">Steel Structure Construction</span></li>
+                <li><i class="fas fa-shield-alt"></i> <span class="lang-ar">توريد وتركيب الأبواب الحديدية بكافة
+                        أنواعها</span><span class="lang-en">All Types of Iron Doors</span></li>
+                <li><i class="fas fa-window-maximize"></i> <span class="lang-ar">تركيب الشتر والنوافذ من مواد
+                        UPVC</span><span class="lang-en">UPVC Windows & Rolling Shutters</span></li>
             </ul>
         </div>
 
@@ -70,4 +99,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
