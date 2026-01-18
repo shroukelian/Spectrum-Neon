@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة نيون الطيف للمقاولات | Neon Al-Tayf</title>
+    <!-- خطوط جوجل -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <!-- مكتبة الأيقونات والأنيميشن -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- الهيدر المطور -->
+    <header class="main-header">
+        <div class="container navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="نيون الطيف">
+                <div class="logo-text">
+                    <h1>نيون الطيف</h1>
+                    <span>للمقاولات</span>
+                </div>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="lang-ar">الرئيسية</a><a href="index.html" class="lang-en">Home</a>
+                    </li>
+                    <li><a href="about.html" class="lang-ar">من نحن</a><a href="about.html" class="lang-en">About</a>
+                    </li>
+
+                    <!-- قائمة الخدمات المنسدلة -->
+                    <li class="dropdown">
+                        <a href="#services" class="dropbtn lang-ar">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <a href="#services" class="dropbtn lang-en">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="general-contracting.html">المقاولات العامة</a></li>
+                            <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
+                            <li><a href="decoration.html">أعمال الديكورات</a></li>
+                            <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                            <li><a href="exterior-finishing.html">التشطيبات الخارجية</a></li>
+                            <li><a href="electrical-works.html">أعمال الكهرباء</a></li>
+                            <li><a href="plumbing-works.html">أعمال السباكة</a></li>
+                            <li><a href="hvac.html">أعمال التكييف</a></li>
+                            <li><a href="fire-safety.html">السلامة ومكافحة الحريق</a></li>
+                            <li><a href="security-systems.html">الأنظمة الأمنية</a></li>
+                            <li><a href="infrastructure.html">الطرق والبنية التحتية</a></li>
+                            <li><a href="landscaping.html">الحدائق واللاندسكيب</a></li>
+                            <li><a href="steel-aluminum.html">الحديد والألمنيوم</a></li>
+                            <li><a href="maintenance.html">الصيانة والتشغيل</a></li>
+                            <li><a href="specialized-works.html">أعمال متخصصة</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="vision2030.html" class="lang-ar">رؤية 2030</a><a href="vision2030.html"
+                            class="lang-en">Vision 2030</a></li>
+                    <li><button id="langSwitcher" class="lang-btn">English</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- قسم الواجهة مع الخلفية المتحركة -->
+    <section id="home" class="hero-section">
+        <!-- هذه الطبقة هي التي ستحتوي على الصورة وتتحرك -->
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container">
+            <h2 class="animate-fadeIn lang-ar">نبني المستقبل بألوان من الجودة</h2>
+            <p class="lang-ar">مجموعة وطنية رائدة في المقاولات العامة والتشطيبات المتكاملة وفق رؤية المملكة 2030.</p>
+            <div class="hero-btns">
+                <a href="#quote-form" class="btn-gold pulse-animation lang-ar">اطلب عرض سعر</a>
+                <a href="#services" class="btn-outline lang-ar">استكشف أعمالنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج طلب عرض سعر المطور -->
+    <section id="quote-form" class="quick-form-section container">
+        <div class="form-card-pro reveal">
+            <div class="form-header">
+                <h3 class="lang-ar">اطلب عرض سعر الآن</h3>
+                <h3 class="lang-en">Request a Quote Now</h3>
+                <div class="gold-line"></div>
+            </div>
+            <form id="leadForm">
+                <div class="form-grid-modern">
+                    <div class="input-box">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="userName" placeholder="الاسم بالكامل / Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="userPhone" placeholder="رقم الجوال / Phone Number" required>
+                    </div>
+                    <button type="submit" class="submit-btn-pro">
+                        <span class="lang-ar">إرسال الطلب</span>
+                        <span class="lang-en">Submit</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- قسم عن المجموعة المتكامل -->
+    <section id="about" class="section-padding container">
+        <!-- الجزء الأول: النبذة والالتزامات -->
+        <div class="about-top-grid">
+
+
+            <div class="about-text-side reveal">
+                <div class="section-tag lang-ar">من نحن</div>
+                <div class="section-tag lang-en">About Us</div>
+                <h2 class="main-title lang-ar">مجموعة <span class="gold-text">نيون الطيف</span> الوطنية</h2>
+                <h2 class="main-title lang-en">Neon Al-Tayf <span class="gold-text">National Group</span></h2>
+
+                <p class="description lang-ar">
+                    مجموعة وطنية رائدة ومتخصصة في تنفيذ أعمال المقاولات العامة والإنشائية والتشطيبات المتكاملة، تأسست
+                    لتقديم حلول إنشائية وديكورية مبتكرة وفق أعلى معايير الجودة والسلامة، بما يواكب رؤية المملكة 2030.
+                </p>
+                <p class="description lang-en">
+                    A leading national group specialized in general contracting, structural works, and integrated
+                    finishing, providing innovative construction and decorative solutions according to Vision 2030.
+                </p>
+
+                <!-- دمج الالتزامات في نقاط سريعة -->
+                <ul class="commitments-list lang-ar">
+                    <li><i class="fas fa-check-double"></i> الدقة في التنفيذ</li>
+                    <li><i class="fas fa-check-double"></i> الالتزام بالجداول الزمنية</li>
+                    <li><i class="fas fa-check-double"></i> تحقيق رضا العملاء</li>
+                    <li><i class="fas fa-check-double"></i> تقديم ديكورات مبتكرة</li>
+                </ul>
+                <ul class="commitments-list lang-en">
+                    <li><i class="fas fa-check-double"></i> Precision in execution</li>
+                    <li><i class="fas fa-check-double"></i> Commitment to timelines</li>
+                    <li><i class="fas fa-check-double"></i> Achieving customer satisfaction</li>
+                    <li><i class="fas fa-check-double"></i> Innovative decorations</li>
+                </ul>
+
+                <a href="#services" class="read-more-btn lang-ar">اكتشف خدماتنا <i class="fas fa-arrow-left"></i></a>
+                <a href="#services" class="read-more-btn lang-en">Our Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-images-side reveal">
+                <div class="img-container main-img">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000"
+                        alt="Construction">
+                </div>
+                <div class="experience-badge">
+                    <span class="num">+15</span>
+                    <span class="txt lang-ar">عاماً من الخبرة</span>
+                    <span class="txt lang-en">Years of Exp</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="strategy-grid-unified">
+            <!-- الرؤية -->
+            <div class="vm-card reveal strategy-card">
+                <div class="vm-header">
+                    <div class="icon-circle"><i class="fas fa-eye"></i></div>
+                    <h4 class="lang-ar">رؤيتنا</h4>
+                    <h4 class="lang-en">Our Vision</h4>
+                </div>
+                <div class="vm-body">
+                    <p class="lang-ar">نسعى في مجموعة نيون الطيف للمقاولات لأن نكون رائدين في قطاع المقاولات على
+                        مستوى المملكة العربية السعودية، من خلال تقديم:</p>
+                    <p class="lang-en">We strive to be leaders in the contracting sector in Saudi Arabia by
+                        providing:</p>
+
+                    <ul class="bullet-list lang-ar">
+                        <li>أعمال إنشائية مبتكرة تتوافق مع أحدث المعايير الهندسية والديكورية.</li>
+                        <li>جودة عالية في جميع مراحل التنفيذ.</li>
+                        <li>قيمة مضافة لعملائنا عبر تقديم حلول متكاملة واحترافية.</li>
+                    </ul>
+                    <ul class="bullet-list lang-en">
+                        <li>Innovative construction works aligned with the latest standards.</li>
+                        <li>High quality in all stages of execution.</li>
+                        <li>Added value through integrated professional solutions.</li>
+                    </ul>
+
+                    <p class="lang-ar footer-text">تهدف رؤيتنا إلى تعزيز مكانة المجموعة كمزود موثوق، والمساهمة
+                        الفاعلة في تطوير القطاع بما يواكب رؤية المملكة 2030.</p>
+                    <p class="lang-en footer-text">Our vision aims to enhance the group's position as a reliable
+                        provider, contributing to the sector according to Vision 2030.</p>
+                </div>
+            </div>
+
+            <!-- الرسالة -->
+            <div class="vm-card reveal strategy-card">
+                <div class="vm-header">
+                    <div class="icon-circle"><i class="fas fa-paper-plane"></i></div>
+                    <h4 class="lang-ar">رسالتنا</h4>
+                    <h4 class="lang-en">Our Mission</h4>
+                </div>
+                <div class="vm-body">
+                    <p class="lang-ar">تتمثل رسالة مجموعة نيون الطيف في تقديم خدمات مقاولات متكاملة ومتميزة
+                        تعتمد على:</p>
+                    <p class="lang-en">Our mission is to provide distinguished integrated contracting services
+                        based on:</p>
+
+                    <ul class="bullet-list lang-ar">
+                        <li>كوادر هندسية وفنية مؤهلة وذات خبرة عالية.</li>
+                        <li>استخدام تقنيات وأساليب حديثة في التنفيذ والتصميم.</li>
+                        <li>بناء شراكات استراتيجية قوية مع العملاء والموردين.</li>
+                        <li>الالتزام التام بمعايير الجودة والسلامة والاستدامة.</li>
+                    </ul>
+                    <ul class="bullet-list lang-en">
+                        <li>Qualified engineering and technical staff.</li>
+                        <li>Using modern techniques in execution and design.</li>
+                        <li>Building strong strategic partnerships.</li>
+                        <li>Commitment to quality, safety, and sustainability.</li>
+                    </ul>
+
+                    <p class="lang-ar footer-text">نهدف إلى تقديم مشاريع احترافية تلبي احتياجات العملاء وتحقق
+                        أعلى مستويات الرضا وفق أفضل الممارسات العالمية.</p>
+                    <p class="lang-en footer-text">We aim to deliver professional projects that meet customer
+                        needs and achieve global satisfaction levels.</p>
+                </div>
+            </div>
+
+            <div class="strategy-card reveal vm-card">
+                <div class="st-header">
+                    <i class="fas fa-bullseye"></i>
+                    <h4 class="lang-ar">أهدافنا</h4>
+                    <h4 class="lang-en">Our Goals</h4>
+                </div>
+                <ul class="st-list lang-ar">
+                    <li>تنفيذ المشاريع بأعلى معايير الجودة والمواصفات الدقيقة.</li>
+                    <li>الالتزام بالجداول الزمنية المحددة والتكاليف المعتمدة.</li>
+                    <li>تحقيق رضا العملاء وتجاوز توقعاتهم في كل مراحل المشروع.</li>
+                    <li>بناء شراكات طويلة الأمد مع العملاء والموردين.</li>
+                    <li>تطوير الكوادر البشرية ورفع كفاءة الفريق الهندسي.</li>
+                    <li>الالتزام التام بمعايير السلامة المهنية والاستدامة البيئية.</li>
+                </ul>
+                <ul class="st-list lang-en">
+                    <li>Executing projects with the highest quality standards.</li>
+                    <li>Commitment to timelines and approved budgets.</li>
+                    <li>Achieving and exceeding customer expectations.</li>
+                    <li>Building long-term partnerships with clients and suppliers.</li>
+                    <li>Developing human resources and engineering efficiency.</li>
+                    <li>Full commitment to occupational safety and sustainability.</li>
+                </ul>
+            </div>
+
+            <!-- 4. قيمنا -->
+            <div class="strategy-card reveal vm-card">
+                <div class="st-header">
+                    <i class="fas fa-handshake"></i>
+                    <h4 class="lang-ar">قيمنا</h4>
+                    <h4 class="lang-en">Our Values</h4>
+                </div>
+                <ul class="st-list lang-ar">
+                    <li><strong>الجودة والإتقان:</strong> تقديم الأفضل في كل مراحل التنفيذ.</li>
+                    <li><strong>المصداقية والشفافية:</strong> التعامل بنزاهة ووضوح تام.</li>
+                    <li><strong>الالتزام بالمواعيد:</strong> تسليم المشاريع في الوقت المحدد.</li>
+                    <li><strong>السلامة المهنية:</strong> تطبيق أعلى معايير الحماية للفريق.</li>
+                    <li><strong>التطوير المستمر:</strong> تحسين الأداء والعمليات بشكل دائم.</li>
+                    <li><strong>رضا العملاء:</strong> وضع احتياجات العميل في مقدمة أولوياتنا.</li>
+                </ul>
+                <ul class="st-list lang-en">
+                    <li><strong>Quality:</strong> Delivering excellence in all execution stages.</li>
+                    <li><strong>Credibility:</strong> Integrity and complete transparency.</li>
+                    <li><strong>Commitment:</strong> Delivering projects on schedule.</li>
+                    <li><strong>Safety:</strong> Highest standards of protection for our team.</li>
+                    <li><strong>Development:</strong> Constant improvement of performance.</li>
+                    <li><strong>Satisfaction:</strong> Putting client needs first.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- قسم لماذا نيون الطيف؟ -->
+    <section id="why-us" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="lang-ar" style="text-align: center;">لماذا مجموعة <span class="gold-text">نيون الطيف</span>
+                    للمقاولات؟</h2>
+                <h2 class="lang-en" style="text-align: center;">Why Choose <span class="gold-text">Neon Al-Tayf</span>
+                    Group?</h2>
+                <div class="gold-divider"></div>
+                <p class="lang-ar" style="text-align: center;">نقدم قيمة مضافة من خلال الجمع بين الخبرة العملية والمهارة
+                    الفنية والالتزام التام.</p>
+                <p class="lang-en" style="text-align: center;">We provide added value by combining practical experience,
+                    technical skill, and total commitment.</p>
+            </div>
+
+            <div class="why-grid">
+                <!-- 1. خبرة متنوعة -->
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 class="lang-ar">خبرة عملية متنوعة</h3>
+                    <h3 class="lang-en">Diverse Practical Experience</h3>
+                    <p class="lang-ar">تنفيذ مشاريع سكنية، تجارية، صناعية، وحكومية بمختلف الأحجام.</p>
+                    <p class="lang-en">Executing residential, commercial, industrial, and government projects of all
+                        sizes.</p>
+                </div>
+
+                <!-- 2. فريق مؤهل -->
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3 class="lang-ar">فريق هندسي وفني مؤهل</h3>
+                    <h3 class="lang-en">Qualified Technical Team</h3>
+                    <p class="lang-ar">كوادر متخصصة في جميع مجالات المقاولات والتصميم بأعلى الكفاءات.</p>
+                    <p class="lang-en">Specialized staff in all areas of contracting and design with high competencies.
+                    </p>
+                </div>
+
+                <!-- 3. التزام بالجودة -->
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-history"></i></div>
+                    <h3 class="lang-ar">التزام بالجودة والوقت</h3>
+                    <h3 class="lang-en">Quality & Time Commitment</h3>
+                    <p class="lang-ar">الالتزام بالمواصفات الدقيقة والمعايير الزمنية المحددة لكل مشروع.</p>
+                    <p class="lang-en">Strict adherence to technical specifications and project timelines.</p>
+                </div>
+
+                <!-- 4. أسعار تنافسية -->
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-tags"></i></div>
+                    <h3 class="lang-ar">أسعار تنافسية</h3>
+                    <h3 class="lang-en">Competitive Pricing</h3>
+                    <p class="lang-ar">تقديم أفضل الحلول الاقتصادية مع الحفاظ على أعلى معايير الجودة.</p>
+                    <p class="lang-en">Providing the best economic solutions while maintaining top quality standards.
+                    </p>
+                </div>
+
+                <!-- 5. حلول متكاملة -->
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-key"></i></div>
+                    <h3 class="lang-ar">حلول متكاملة (تسليم مفتاح)</h3>
+                    <h3 class="lang-en">Turnkey Solutions</h3>
+                    <p class="lang-ar">تصميم وتنفيذ وتسليم المشاريع بالكامل بأعلى درجات الاحترافية.</p>
+                    <p class="lang-en">Full design, execution, and delivery of projects with professional excellence.
+                    </p>
+                </div>
+
+                <!-- 6. مرونة في التنفيذ -->
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="lang-ar">مرونة عالية في التنفيذ</h3>
+                    <h3 class="lang-en">Execution Flexibility</h3>
+                    <p class="lang-ar">القدرة على التكيف مع متطلبات العميل وتغييرات المشاريع بمرونة تامة.</p>
+                    <p class="lang-en">Ability to adapt to client requirements and project changes with full
+                        flexibility.</p>
+                </div>
+            </div>
+
+            <div class="why-footer-note reveal text-center">
+                <p class="lang-ar">نسعى دائماً لبناء علاقات طويلة الأمد مع عملائنا لضمان رضاهم الكامل.</p>
+                <p class="lang-en">We always strive to build long-term relationships with our clients to ensure full
+                    satisfaction.</p>
+            </div>
+        </div>
+    </section>
+ <!-- قسم نطاق الأعمال والخدمات الـ 15 -->
+<section id="services" class="services-section bg-dark section-padding">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <h2 class="gold-text lang-ar" style="text-align: center;">نطاق أعمالنا وخدماتنا</h2>
+            <h2 class="gold-text lang-en"  style="text-align: center;">Our Scope of Work & Services</h2>
+            <p class="lang-ar"  style="text-align: center;">حلول متكاملة تغطي كافة مراحل البناء والتشطيب</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- 1. المقاولات العامة -->
+            <a href="general-contracting.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-building"></i></div>
+                <h3 class="lang-ar">المقاولات العامة</h3>
+                <h3 class="lang-en">General Contracting</h3>
+                <p class="lang-ar">تنفيذ المشاريع السكنية والتجارية والصناعية والحكومية.</p>
+            </a>
+
+            <!-- 2. الأعمال الإنشائية -->
+            <a href="structural-works.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-hard-hat"></i></div>
+                <h3 class="lang-ar">الأعمال الإنشائية</h3>
+                <h3 class="lang-en">Structural Works</h3>
+                <p class="lang-ar">تنفيذ الهياكل الخرسانية والمعدنية والمباني الجاهزة.</p>
+            </a>
+
+            <!-- 3. أعمال الديكورات -->
+            <a href="decoration.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-paint-roller"></i></div>
+                <h3 class="lang-ar">أعمال الديكورات</h3>
+                <h3 class="lang-en">Decoration Works</h3>
+                <p class="lang-ar">تصاميم كلاسيك، مودرن، ونيوكلاسيك داخلية وخارجية.</p>
+            </a>
+
+            <!-- 4. التشطيبات الداخلية -->
+            <a href="interior-finishing.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-couch"></i></div>
+                <h3 class="lang-ar">التشطيبات الداخلية</h3>
+                <h3 class="lang-en">Interior Finishes</h3>
+                <p class="lang-ar">لياسة، جبس بورد، دهانات، سيراميك، وأرضيات باركيه.</p>
+            </a>
+
+            <!-- 5. التشطيبات الخارجية -->
+            <a href="exterior-finishing.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-home"></i></div>
+                <h3 class="lang-ar">التشطيبات الخارجية</h3>
+                <h3 class="lang-en">Exterior Finishes</h3>
+                <p class="lang-ar">واجهات معمارية، حجر، كلادينج، ودهانات خارجية.</p>
+            </a>
+
+            <!-- 6. أعمال الكهرباء -->
+            <a href="electrical-works.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="lang-ar">أعمال الكهرباء</h3>
+                <h3 class="lang-en">Electrical Works</h3>
+                <p class="lang-ar">تمديد شبكات وأنظمة إنارة وطاقة شمسية وصيانة.</p>
+            </a>
+
+            <!-- 7. أعمال السباكة -->
+            <a href="plumbing-works.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-faucet"></i></div>
+                <h3 class="lang-ar">أعمال السباكة</h3>
+                <h3 class="lang-en">Plumbing Works</h3>
+                <p class="lang-ar">شبكات مياه وصرف صحي وتركيب أدوات صحية.</p>
+            </a>
+
+            <!-- 8. أعمال التكييف -->
+            <a href="hvac.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-wind"></i></div>
+                <h3 class="lang-ar">أعمال التكييف (HVAC)</h3>
+                <h3 class="lang-en">HVAC Works</h3>
+                <p class="lang-ar">أنظمة تكييف مركزي وسبليت ومجاري الهواء.</p>
+            </a>
+
+            <!-- 9. السلامة ومكافحة الحريق -->
+            <a href="fire-safety.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                <h3 class="lang-ar">السلامة ومكافحة الحريق</h3>
+                <h3 class="lang-en">Fire Safety</h3>
+                <p class="lang-ar">أنظمة إنذار وإطفاء آلي معتمدة من الدفاع المدني.</p>
+            </a>
+
+            <!-- 10. الأنظمة الأمنية -->
+            <a href="security-systems.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-video"></i></div>
+                <h3 class="lang-ar">الأنظمة الأمنية والتقنية</h3>
+                <h3 class="lang-en">Security Systems</h3>
+                <p class="lang-ar">كاميرات مراقبة، تحكم بالدخول، ومنازل ذكية.</p>
+            </a>
+
+            <!-- 11. الطرق والبنية التحتية -->
+            <a href="infrastructure.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-road"></i></div>
+                <h3 class="lang-ar">الطرق والبنية التحتية</h3>
+                <h3 class="lang-en">Infrastructure</h3>
+                <p class="lang-ar">سفلتة طرق، أرصفة، وشبكات صرف وتصريف سيول.</p>
+            </a>
+
+            <!-- 12. الحدائق واللاندسكيب -->
+            <a href="landscaping.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-leaf"></i></div>
+                <h3 class="lang-ar">الحدائق واللاندسكيب</h3>
+                <h3 class="lang-en">Landscaping</h3>
+                <p class="lang-ar">تنسيق مساحات خضراء، شلالات، وأنظمة ري ذكية.</p>
+            </a>
+
+            <!-- 13. الحديد والألمنيوم -->
+            <a href="steel-aluminum.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-tools"></i></div>
+                <h3 class="lang-ar">أعمال الحديد والألمنيوم</h3>
+                <h3 class="lang-en">Steel & Aluminum</h3>
+                <p class="lang-ar">أبواب، نوافذ، درابزين، وهياكل معدنية ثقيلة.</p>
+            </a>
+
+            <!-- 14. الصيانة والتشغيل -->
+            <a href="maintenance.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-wrench"></i></div>
+                <h3 class="lang-ar">الصيانة والتشغيل</h3>
+                <h3 class="lang-en">Maintenance</h3>
+                <p class="lang-ar">صيانة عامة للمباني والمرافق وعقود تشغيل دورية.</p>
+            </a>
+
+            <!-- 15. أعمال متخصصة -->
+            <a href="specialized-works.html" class="s-card reveal">
+                <div class="s-icon"><i class="fas fa-star"></i></div>
+                <h3 class="lang-ar">أعمال متخصصة إضافية</h3>
+                <h3 class="lang-en">Specialized Works</h3>
+                <p class="lang-ar">عزل مسابح، إيبوكسي صناعي، وغرف تبريد.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- قسم الجودة والسلامة المطور -->
+    <section id="quality" class="section-padding bg-light">
+        <div class="container">
+            <div class="quality-card-large reveal">
+                <div class="section-header text-center">
+                    <h2 class="lang-ar" style="text-align: center;">الجودة والسلامة المهنية</h2>
+                    <h2 class="lang-en" style="text-align: center;">Quality & Occupational Safety</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="quality-body">
+                    <p class="main-intro lang-ar">
+                        تلتزم <strong>مجموعة نيون الطيف للمقاولات</strong> بتطبيق أعلى معايير الجودة والسلامة في جميع
+                        أعمالها ومشاريعها، لضمان تنفيذ الأعمال وفق أعلى مستويات الاحترافية، والحفاظ على سلامة العاملين
+                        والمستفيدين، والالتزام الكامل بالأنظمة واللوائح المعتمدة.
+                    </p>
+                    <p class="main-intro lang-en">
+                        <strong>Neon Al-Tayf Group</strong> is committed to implementing the highest standards of
+                        quality and safety in all its projects to ensure professional execution and the safety of all
+                        stakeholders.
+                    </p>
+
+                    <div class="quality-features-grid">
+                        <div class="q-feature">
+                            <i class="fas fa-certificate"></i>
+                            <p class="lang-ar">تطبيق أنظمة الجودة المعتمدة (ISO أو ما يعادلها) في جميع مراحل التنفيذ.
+                            </p>
+                            <p class="lang-en">Applying certified quality systems (ISO) in all execution phases.</p>
+                        </div>
+                        <div class="q-feature">
+                            <i class="fas fa-hard-hat"></i>
+                            <p class="lang-ar">الالتزام بمعايير السلامة المهنية لحماية العمال والمستخدمين.</p>
+                            <p class="lang-en">Commitment to occupational safety standards for workers and users.</p>
+                        </div>
+                        <div class="q-feature">
+                            <i class="fas fa-fire-extinguisher"></i>
+                            <p class="lang-ar">الامتثال لاشتراطات الدفاع المدني لجميع المنشآت والمرافق.</p>
+                            <p class="lang-en">Compliance with Civil Defense requirements for all facilities.</p>
+                        </div>
+                        <div class="q-feature">
+                            <i class="fas fa-file-contract"></i>
+                            <p class="lang-ar">الالتزام بالأنظمة واللوائح الحكومية، بما في ذلك متطلبات البناء والتشييد.
+                            </p>
+                            <p class="lang-en">Adherence to government regulations and building codes.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality-footer-box">
+                        <p class="lang-ar">
+                            <i class="fas fa-clipboard-check"></i>
+                            يتضمن عملنا إشرافاً مستمراً على جميع الأعمال، والتدقيق على مطابقة المواد والمعدات للمواصفات،
+                            ومتابعة إجراءات السلامة المهنية والتقارير الدورية لضمان أعلى مستويات الجودة.
+                        </p>
+                        <p class="lang-en">
+                            <i class="fas fa-clipboard-check"></i>
+                            Our work includes continuous supervision, auditing materials and equipment compliance, and
+                            following safety procedures with periodic reports.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الهيكل التنظيمي -->
+    <section id="org-structure" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="lang-ar" style="text-align: center;">الهيكل التنظيمي</h2>
+                <h2 class="lang-en" style="text-align: center;">Organizational Structure</h2>
+                <div class="gold-divider"></div>
+                <p class="lang-ar" style="text-align: center;">نظام إداري متكامل لضمان أعلى مستويات التنسيق والكفاءة في
+                    التنفيذ.</p>
+                <p class="lang-en" style="text-align: center;">An integrated administrative system to ensure the highest
+                    levels of coordination and efficiency.</p>
+            </div>
+
+            <div class="org-grid">
+                <!-- الإدارة العليا -->
+                <div class="org-card reveal">
+                    <i class="fas fa-users-cog"></i>
+                    <h4 class="lang-ar">الإدارة العليا</h4>
+                    <h4 class="lang-en">Senior Management</h4>
+                    <p class="lang-ar">رسم السياسات العامة واتخاذ القرارات الإستراتيجية للمجموعة.</p>
+                </div>
+                <!-- إدارة المشاريع -->
+                <div class="org-card reveal">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4 class="lang-ar">إدارة المشاريع</h4>
+                    <h4 class="lang-en">Project Management</h4>
+                    <p class="lang-ar">التخطيط والمتابعة لضمان الالتزام بالوقت والتكلفة والجودة.</p>
+                </div>
+                <!-- الإدارة الهندسية -->
+                <div class="org-card reveal">
+                    <i class="fas fa-drafting-pencil"></i>
+                    <h4 class="lang-ar">الإدارة الهندسية</h4>
+                    <h4 class="lang-en">Engineering Dept</h4>
+                    <p class="lang-ar">إعداد المخططات الفنية والإشراف الهندسي الدقيق على التنفيذ.</p>
+                </div>
+                <!-- إدارة التشغيل -->
+                <div class="org-card reveal">
+                    <i class="fas fa-cogs"></i>
+                    <h4 class="lang-ar">إدارة التشغيل</h4>
+                    <h4 class="lang-en">Operations Dept</h4>
+                    <p class="lang-ar">متابعة العمليات الميدانية اليومية وإدارة فرق العمل الفنية.</p>
+                </div>
+                <!-- الجودة والسلامة -->
+                <div class="org-card reveal">
+                    <i class="fas fa-check-double"></i>
+                    <h4 class="lang-ar">الجودة والسلامة</h4>
+                    <h4 class="lang-en">Quality & Safety</h4>
+                    <p class="lang-ar">تطبيق معايير ISO وضمان سلامة بيئة العمل والمستفيدين.</p>
+                </div>
+                <!-- الإدارة المالية -->
+                <div class="org-card reveal">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h4 class="lang-ar">الإدارة المالية</h4>
+                    <h4 class="lang-en">Financial Dept</h4>
+                    <p class="lang-ar">إدارة الموارد والميزانيات لضمان استدامة المشاريع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عملاؤنا -->
+    <section id="clients" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="lang-ar" style="text-align: center;">قاعدة عملاؤنا</h2>
+                <h2 class="lang-en" style="text-align: center;">Our Clients</h2>
+                <div class="gold-divider"></div>
+                <p class="lang-ar" style="text-align: center;">نفخر بخدمة مختلف القطاعات بمهنية واحترافية عالية.</p>
+                <p class="lang-en" style="text-align: center;">We are proud to serve various sectors with high
+                    professionalism.</p>
+            </div>
+
+            <div class="clients-sectors-grid">
+                <!-- القطاع الحكومي -->
+                <div class="sector-card reveal">
+                    <div class="sector-icon"><i class="fas fa-university"></i></div>
+                    <h4 class="lang-ar">الجهات الحكومية</h4>
+                    <h4 class="lang-en">Government Sector</h4>
+                    <p class="lang-ar">تنفيذ المشاريع والمرافق العامة وفق المواصفات الرسمية المعتمدة.</p>
+                </div>
+                <!-- الشركات -->
+                <div class="sector-card reveal">
+                    <div class="sector-icon"><i class="fas fa-building"></i></div>
+                    <h4 class="lang-ar">الشركات والمؤسسات</h4>
+                    <h4 class="lang-en">Corporate Sector</h4>
+                    <p class="lang-ar">تقديم حلول المقاولات الشاملة للمكاتب والمعارض والمجمعات التجارية.</p>
+                </div>
+                <!-- الصناعي -->
+                <div class="sector-card reveal">
+                    <div class="sector-icon"><i class="fas fa-industry"></i></div>
+                    <h4 class="lang-ar">القطاع الصناعي</h4>
+                    <h4 class="lang-en">Industrial Sector</h4>
+                    <p class="lang-ar">إنشاء وصيانة المصانع والمستودعات والمنشآت الصناعية الكبرى.</p>
+                </div>
+                <!-- المطورين -->
+                <div class="sector-card reveal">
+                    <div class="sector-icon"><i class="fas fa-city"></i></div>
+                    <h4 class="lang-ar">المطورين العقاريين</h4>
+                    <h4 class="lang-en">Real Estate Developers</h4>
+                    <p class="lang-ar">تنفيذ المشاريع السكنية والتجارية بنظام التسليم المفتاح.</p>
+                </div>
+                <!-- الأفراد -->
+                <div class="sector-card reveal">
+                    <div class="sector-icon"><i class="fas fa-home"></i></div>
+                    <h4 class="lang-ar">الأفراد (القطاع الخاص)</h4>
+                    <h4 class="lang-en">Individuals</h4>
+                    <p class="lang-ar">تصميم وتنفيذ الفلل والقصور الخاصة وفق أرقى الرغبات والاحتياجات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- الفوتر المطور والفخم -->
+    <footer class="main-footer">
+        <div class="container footer-grid-pro">
+            <!-- عمود 1: عن المجموعة -->
+            <div class="footer-col about-col">
+                <img src="images/logo.png" alt="نيون الطيف" class="footer-logo">
+                <p class="lang-ar">نبني المستقبل بألوان من الجودة. مجموعة رائدة في المقاولات والتشطيبات الحديثة.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-snapchat"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <!-- <a href="#"><i class="fab fa-x-twitter"></i></a> -->
+                </div>
+            </div>
+
+            <!-- عمود 2: روابط سريعة -->
+            <div class="footer-col">
+                <h4 class="lang-ar">روابط سريعة</h4>
+                <h4 class="lang-en">Quick Links</h4>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#quote-form">طلب تسعيرة</a></li>
+                </ul>
+            </div>
+
+            <!-- عمود 3: تواصل معنا -->
+            <div class="footer-col">
+                <h4 class="lang-ar">تواصل معنا</h4>
+                <h4 class="lang-en">Contact Us</h4>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span dir="ltr">+966 544 028 428</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span dir="ltr">+966 565 356 905</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@neon-altayf.com</span>
+                </div>
+            </div>
+
+            <!-- عمود 4: الرؤية -->
+            <div class="footer-col vision-col">
+                <h4 class="lang-ar">رؤية المملكة 2030</h4>
+                <h4 class="lang-en">Vision 2030</h4>
+                <img src="images/2030.webp" alt="Vision 2030" class="vision-img-f">
+                <p class="lang-ar">شريك فاعل في تحقيق النهضة العمرانية للمملكة.</p>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <div class="container">
+                <p>&copy; 2026 جميع الحقوق محفوظة لـ <strong>مجموعة نيون الطيف للمقاولات</strong></p>
+            </div>
+        </div>
+    </footer>
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/966536501749" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

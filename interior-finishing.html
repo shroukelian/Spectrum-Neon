@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التشطيبات الداخلية | نيون الطيف</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="inner-page">
+    <header class="main-header">
+        <div class="container navbar">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="images/logo.png" alt="نيون الطيف">
+                <div class="logo-text">
+                    <h1>نيون الطيف</h1><span>للمقاولات</span>
+                </div>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="general-contracting.html">المقاولات العامة</a></li>
+                            <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
+                            <li><a href="decoration.html">أعمال الديكورات</a></li>
+                            <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#vision">رؤية 2030</a></li>
+                    <li><button id="langSwitcher" class="lang-btn">English</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="inner-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000') center/cover;">
+        <div class="container">
+            <h1 class="lang-ar">أعمال التشطيبات الداخلية</h1>
+            <h1 class="lang-en">Interior Finishing Works</h1>
+        </div>
+    </section>
+
+    <main class="section-padding container">
+        <div class="service-desc-box reveal active">
+            <h2 class="lang-ar">جودة التنفيذ <span class="gold-text">واحترافية الأداء</span></h2>
+            <h2 class="lang-en">Professional Execution <span class="gold-text">& Quality</span></h2>
+            <p class="lang-ar">ننفيذ الأعمال النهائية للمساحات الداخلية وفق التصاميم والمخططات المعتمدة، وباستخدام مواد
+                عالية الجودة وأساليب تنفيذ احترافية تضمن الاستدامة والجمال.</p>
+            <p class="lang-en">We execute the final works for interior spaces according to approved designs, using
+                high-quality materials and professional techniques that ensure sustainability and beauty.</p>
+
+            <ul class="service-list">
+                <li><i class="fas fa-brush"></i> <span class="lang-ar">أعمال اللياسة (البياض) ومعالجة الأسطح</span><span
+                        class="lang-en">Plastering & Surface Treatment</span></li>
+                <li><i class="fas fa-layer-group"></i> <span class="lang-ar">أعمال الجبس بورد والأسقف
+                        المستعارة</span><span class="lang-en">Gypsum Board & Suspended Ceilings</span></li>
+                <li><i class="fas fa-palette"></i> <span class="lang-ar">تنفيذ الدهانات الداخلية والخارجية</span><span
+                        class="lang-en">Interior & Exterior Painting</span></li>
+                <li><i class="fas fa-th"></i> <span class="lang-ar">تركيب السيراميك والبورسلان والرخام</span><span
+                        class="lang-en">Ceramics, Porcelain & Marble</span></li>
+                <li><i class="fas fa-square"></i> <span class="lang-ar">الأرضيات (باركيه – فينيل – إيبوكسي)</span><span
+                        class="lang-en">Flooring (Parquet, Vinyl, Epoxy)</span></li>
+                <li><i class="fas fa-shield-alt"></i> <span class="lang-ar">أعمال العزل الحراري والعزل
+                        الصوتي</span><span class="lang-en">Thermal & Acoustic Insulation</span></li>
+                <li><i class="fas fa-scroll"></i> <span class="lang-ar">تركيب ورق الجدران والديكورات
+                        الجدارية</span><span class="lang-en">Wallpaper & Wall Decorations</span></li>
+            </ul>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="text-center lang-ar">من مشاريع التشطيب الداخلي</h2>
+            <h2 class="text-center lang-en">Interior Finishing Projects</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/finish1.jpg" alt="Interior"></div>
+                <div class="gallery-item"><img src="images/finish2.jpg" alt="Interior"></div>
+                <div class="gallery-item"><img src="images/finish3.jpg" alt="Interior"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر الموحد -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعمال الديكورات | نيون الطيف</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="inner-page">
+    <!-- الهيدر الموحد -->
+    <header class="main-header">
+        <div class="container navbar">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="images/logo.png" alt="نيون الطيف">
+                <div class="logo-text">
+                    <h1>نيون الطيف</h1><span>للمقاولات</span>
+                </div>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="general-contracting.html">المقاولات العامة</a></li>
+                            <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
+                            <li><a href="decoration.html">أعمال الديكورات</a></li>
+                            <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#vision">رؤية 2030</a></li>
+                    <li><button id="langSwitcher" class="lang-btn">English</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="inner-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000') center/cover;">
+        <div class="container">
+            <h1 class="lang-ar">جميع أعمال الديكورات</h1>
+            <h1 class="lang-en">All Decoration Works</h1>
+        </div>
+    </section>
+
+    <main class="section-padding container">
+        <div class="service-desc-box reveal active">
+            <h2 class="lang-ar">فن التصميم <span class="gold-text">وعبق الإبداع</span></h2>
+            <h2 class="lang-en">The Art of Design <span class="gold-text">& Creativity</span></h2>
+            <p class="lang-ar">تشمل خدماتنا جميع أعمال الديكورات الداخلية والخارجية بجميع أنواعها وأشكالها، من التصاميم
+                المودرن الصارخة إلى الكلاسيكية العريقة، وفق أعلى معايير الجودة والسلامة.</p>
+            <p class="lang-en">Our services include all types of interior and exterior decorations, from modern designs
+                to ancient classics, following the highest quality and safety standards.</p>
+
+            <h3 class="mt-4 lang-ar">مجالات التخصص:</h3>
+            <h3 class="mt-4 lang-en">Specializations:</h3>
+            <ul class="service-list">
+                <li><i class="fas fa-home"></i> <span class="lang-ar">ديكورات سكنية (فلل - شقق - قصور)</span><span
+                        class="lang-en">Residential (Villas, Apartments, Palaces)</span></li>
+                <li><i class="fas fa-store"></i> <span class="lang-ar">ديكورات تجارية (محلات - معارض -
+                        مكاتب)</span><span class="lang-en">Commercial (Shops, Showrooms, Offices)</span></li>
+                <li><i class="fas fa-utensils"></i> <span class="lang-ar">ديكورات مطاعم وكافيهات</span><span
+                        class="lang-en">Restaurants & Cafes</span></li>
+                <li><i class="fas fa-hospital"></i> <span class="lang-ar">مراكز طبية ومستشفيات</span><span
+                        class="lang-en">Medical Centers & Hospitals</span></li>
+                <li><i class="fas fa-school"></i> <span class="lang-ar">مدارس وجامعات</span><span
+                        class="lang-en">Schools & Universities</span></li>
+                <li><i class="fas fa-hotel"></i> <span class="lang-ar">ديكورات فندقية وسياحية</span><span
+                        class="lang-en">Hotels & Tourism</span></li>
+                <li><i class="fas fa-gem"></i> <span class="lang-ar">ديكورات فاخرة (Luxury)</span><span
+                        class="lang-en">Luxury Decorations</span></li>
+                <li><i class="fas fa-lightbulb"></i> <span class="lang-ar">ديكورات ذكية ومتكاملة</span><span
+                        class="lang-en">Smart & Integrated Designs</span></li>
+            </ul>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="text-center lang-ar">نماذج من أعمال الديكور</h2>
+            <h2 class="text-center lang-en">Decoration Samples</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/decor1.jpg" alt="Decoration"></div>
+                <div class="gallery-item"><img src="images/decor2.jpg" alt="Decoration"></div>
+                <div class="gallery-item"><img src="images/decor3.jpg" alt="Decoration"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 مجموعة نيون الطيف للمقاولات - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

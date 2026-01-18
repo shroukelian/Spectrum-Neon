@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعمال التكييف والتهوية | نيون الطيف</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="inner-page">
+ <header class="main-header">
+        <div class="container navbar">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="images/logo.png" alt="نيون الطيف">
+                <div class="logo-text">
+                    <h1>نيون الطيف</h1><span>للمقاولات</span>
+                </div>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="general-contracting.html">المقاولات العامة</a></li>
+                            <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
+                            <li><a href="decoration.html">أعمال الديكورات</a></li>
+                            <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#vision">رؤية 2030</a></li>
+                    <li><button id="langSwitcher" class="lang-btn">English</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+    <section class="inner-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094288338-2314dddb79a1?q=80&w=2000') center/cover;">
+        <div class="container">
+            <h1 class="lang-ar">أعمال التكييف والتهوية (HVAC)</h1>
+            <h1 class="lang-en">HVAC & Ventilation Works</h1>
+        </div>
+    </section>
+
+    <main class="section-padding container">
+        <div class="service-desc-box reveal active">
+            <h2 class="lang-ar">حلول تبريد <span class="gold-text">متكاملة</span></h2>
+            <h2 class="lang-en">Integrated <span class="gold-text">Cooling Solutions</span></h2>
+            <p class="lang-ar">ننفذ جميع أعمال التكييف والتهوية للمباني السكنية والتجارية والصناعية وفق أعلى معايير الجودة والسلامة، مع الالتزام بكود التكييف والتهوية السعودي.</p>
+            <p class="lang-en">We execute all HVAC works for residential, commercial, and industrial buildings following the highest safety standards and the Saudi Mechanical Code.</p>
+            
+            <ul class="service-list">
+                <li><i class="fas fa-snowflake"></i> <span class="lang-ar">تركيب مكيفات سبليت بمختلف القدرات</span><span class="lang-en">Split AC Units Installation</span></li>
+                <li><i class="fas fa-fan"></i> <span class="lang-ar">أنظمة التكييف المركزي (Chiller – VRF – Rooftop)</span><span class="lang-en">Central AC Systems (VRF, Chillers)</span></li>
+                <li><i class="fas fa-wind"></i> <span class="lang-ar">تنفيذ مجاري الهواء (Ducts) وأنظمة التوزيع</span><span class="lang-en">Air Ducting & Distribution Systems</span></li>
+                <li><i class="fas fa-air-freshener"></i> <span class="lang-ar">أنظمة التهوية الطبيعية والصناعية والشفط</span><span class="lang-en">Natural & Industrial Ventilation</span></li>
+                <li><i class="fas fa-tools"></i> <span class="lang-ar">الصيانة الدورية والوقائية لأنظمة التكييف</span><span class="lang-en">Periodic & Preventive Maintenance</span></li>
+                <li><i class="fas fa-desktop"></i> <span class="lang-ar">ضبط الأداء واختبارات الكفاءة التشغيلية</span><span class="lang-en">Performance Tuning & Efficiency Testing</span></li>
+            </ul>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="text-center lang-ar">صور من مشاريع التكييف</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/hvac1.jpg" alt="HVAC"></div>
+                <div class="gallery-item"><img src="images/hvac2.jpg" alt="Ducts"></div>
+                <div class="gallery-item"><img src="images/hvac3.jpg" alt="Chiller"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

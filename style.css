@@ -1,0 +1,1878 @@
+:root {
+    --primary-maroon: #611515;
+    /* اللون من اللوجو */
+    --gold: #d4af37;
+    --beige: #E5D1B8;
+    --dark: #121212;
+    --light: #f4f4f4;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* اللغات */
+[lang="en"] .lang-ar {
+    display: none;
+}
+
+[lang="ar"] .lang-en {
+    display: none;
+}
+
+[lang="en"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Header */
+.main-header {
+    background: var(--primary-maroon);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    border-bottom: 2px solid var(--gold);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo-text h1 {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.logo-text span {
+    color: var(--gold);
+    font-size: 11px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.lang-btn {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* --- إعدادات الهيدر وضبط القائمة --- */
+.menu-toggle {
+    display: none;
+    /* مخفي افتراضياً في الديسكتوب */
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* إخفاء الروابط في الجوال لتظهر بالضغط */
+    .menu-toggle {
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* إظهار التلات شرطات */
+}
+
+/* --- أنيميشن الخلفية المستمر (Hero Background) --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* ضروري لمنع خروج الصورة أثناء التكبير */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/OIP\ \(1\).webp');
+    /* صورة فخمة لموقع بناء */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* الأنيميشن المستمر للصورة */
+    animation: kenBurns 20s linear infinite alternate;
+}
+
+@keyframes kenBurns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(97, 21, 21, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+/* --- أنيميشن النبض للزر (Pulse) --- */
+.pulse-animation {
+    animation: pulseEffect 2s infinite;
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
+
+/* --- أنيميشن ظهور النصوص --- */
+.animate-fadeIn {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: var(--beige);
+}
+
+/* Buttons */
+.btn-gold {
+    background: var(--gold);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 13px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Quick Form Card */
+.quick-form-section {
+    margin-top: -60px;
+    position: relative;
+    z-index: 100;
+}
+
+.form-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-grid input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background: var(--primary-maroon);
+    color: #fff;
+    border: none;
+    padding: 0 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Services */
+.bg-dark {
+    background: var(--dark);
+    color: #fff;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.s-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.s-card:hover {
+    transform: translateY(-10px);
+    background: var(--primary-maroon);
+    border-color: var(--gold);
+}
+
+.s-icon {
+    font-size: 45px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating WA */
+.wa-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- ضبط نموذج طلب السعر --- */
+.form-card-pro {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    margin-top: -80px;
+    /* التداخل مع الهيرو */
+    position: relative;
+    z-index: 100;
+    border-bottom: 4px solid var(--gold);
+}
+
+.form-grid-modern {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    color: var(--gold);
+}
+
+[lang="en"] .input-box i {
+    right: auto;
+    left: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 45px 15px 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fdfdfd;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+[lang="en"] .input-box input {
+    padding: 15px 15px 15px 45px;
+}
+
+.input-box input:focus {
+    border-color: var(--gold);
+    outline: none;
+    background: #fff;
+}
+
+.submit-btn-pro {
+    background: var(--primary-maroon);
+    color: white;
+    border: none;
+    padding: 0 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 55px;
+    transition: 0.3s;
+}
+
+/* --- ضبط قسم من نحن --- */
+.about-main-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.section-tag {
+    background: rgba(97, 21, 21, 0.1);
+    color: var(--primary-maroon);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.vision-mission-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* جعلهم فوق بعض في الجوال */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+    .vision-mission-cards {
+        grid-template-columns: 1fr 1fr;
+        /* بجانب بعض في الديسكتوب */
+    }
+}
+
+.vm-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vm-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.vm-header h4 {
+    font-size: 20px;
+    color: var(--primary-maroon);
+    font-weight: 800;
+}
+
+.bullet-list {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-right: 25px;
+    /* للعربي */
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+[lang="en"] .bullet-list li {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+.bullet-list li::before {
+    content: "•";
+    position: absolute;
+    right: 0;
+    /* للعربي */
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+[lang="en"] .bullet-list li::before {
+    right: auto;
+    left: 0;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+[lang="en"] .vm-card {
+    border-right: none;
+    border-left: 4px solid var(--gold);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-maroon);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* جهة الصور */
+.about-images-side {
+    position: relative;
+}
+
+.main-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0 var(--beige);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: var(--gold);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-badge .num {
+    font-size: 35px;
+    font-weight: 900;
+    display: block;
+    line-height: 1;
+}
+
+.experience-badge .txt {
+    font-size: 12px;
+}
+
+/* التجاوب للجوال */
+@media (max-width: 992px) {
+    .about-main-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .form-grid-modern {
+        grid-template-columns: 1fr;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+}
+
+/* --- تنسيق قسم الجودة والسلامة الجديد --- */
+.quality-card-large {
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    border-right: 8px solid var(--primary-maroon);
+    /* خط عنابي جهة اليمين للعربي */
+    position: relative;
+    overflow: hidden;
+}
+
+[lang="en"] .quality-card-large {
+    border-right: none;
+    border-left: 8px solid var(--primary-maroon);
+    /* خط جهة اليسار للإنجليزي */
+}
+
+.gold-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--gold);
+    margin: 15px auto 30px;
+    border-radius: 2px;
+}
+
+.main-intro {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.quality-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* عمودين في الديسكتوب */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.q-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #fcfcfc;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.q-feature:hover {
+    background: #f0f7ff;
+    transform: translateY(-5px);
+}
+
+.q-feature i {
+    font-size: 24px;
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+.quality-footer-box {
+    background: var(--primary-maroon);
+    color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.quality-footer-box i {
+    font-size: 30px;
+    color: var(--gold);
+}
+
+/* التجاوب للجوال */
+@media (max-width: 768px) {
+    .quality-card-large {
+        padding: 30px 20px;
+    }
+
+    .quality-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* عمود واحد في الجوال */
+    .main-intro {
+        font-size: 16px;
+    }
+
+    .quality-footer-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --- تنسيق قسم الهوية الإستراتيجية --- */
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* كرتين في الصف للديسكتوب */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.strategy-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid var(--gold);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.strategy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.st-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.st-header i {
+    font-size: 28px;
+    color: var(--primary-maroon);
+}
+
+.st-header h4 {
+    font-size: 22px;
+    color: var(--primary-maroon);
+    font-weight: 800;
+}
+
+.strategy-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.st-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.st-list li {
+    position: relative;
+    padding-right: 25px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+[lang="en"] .st-list li {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+.st-list li::before {
+    content: "✦";
+    position: absolute;
+    right: 0;
+    color: var(--gold);
+}
+
+[lang="en"] .st-list li::before {
+    right: auto;
+    left: 0;
+}
+
+/* التجاوب للجوال */
+@media (max-width: 992px) {
+    .strategy-grid {
+        grid-template-columns: 1fr;
+        /* كرت واحد في الصف للجوال */
+    }
+}
+
+/* --- تنسيق الهيكل التنظيمي --- */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.org-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.org-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.org-card i {
+    font-size: 35px;
+    color: var(--primary-maroon);
+    margin-bottom: 20px;
+}
+
+.org-card h4 {
+    color: var(--primary-maroon);
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.org-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- تنسيق قسم العملاء --- */
+.clients-sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.sector-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border-bottom: 3px solid var(--gold);
+}
+
+.sector-card:hover {
+    background: var(--primary-maroon);
+    border-color: var(--gold);
+}
+
+.sector-card:hover h4,
+.sector-card:hover p {
+    color: #fff;
+}
+
+.sector-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(97, 21, 21, 0.05);
+    color: var(--primary-maroon);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.sector-card:hover .sector-icon {
+    background: var(--gold);
+    color: var(--primary-maroon);
+}
+
+.sector-card h4 {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.sector-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+
+    .org-grid,
+    .clients-sectors-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- تنسيق قسم لماذا نيون الطيف --- */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.why-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    transition: 0.4s all ease;
+    position: relative;
+    z-index: 1;
+}
+
+.why-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: var(--primary-maroon);
+    border-radius: 20px;
+    transition: 0.4s all ease;
+    z-index: -1;
+}
+
+.why-card:hover::before {
+    height: 100%;
+}
+
+.why-card:hover h3,
+.why-card:hover p {
+    color: #fff;
+}
+
+.why-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    transition: 0.4s;
+}
+
+.why-card:hover .why-icon {
+    background: var(--gold);
+    color: var(--primary-maroon);
+    transform: rotateY(360deg);
+}
+
+.why-card h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+    color: var(--primary-maroon);
+    font-weight: 800;
+}
+
+.why-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.why-footer-note {
+    margin-top: 50px;
+    font-weight: bold;
+    color: var(--primary-maroon);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- دمج قسم عن المجموعة --- */
+.about-top-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.fast-check-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.fast-check-list li {
+    font-weight: bold;
+    color: var(--primary-maroon);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+/* شبكة الإستراتيجية الموحدة */
+.strategy-grid-unified {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 أعمدة في الديسكتوب */
+    gap: 20px;
+}
+
+.strategy-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid var(--gold);
+    transition: 0.3s;
+}
+
+.strategy-card:hover {
+    transform: translateY(-10px);
+    background: #fdfdfd;
+}
+
+.st-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.st-header i {
+    font-size: 22px;
+    color: var(--primary-maroon);
+}
+
+.st-header h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary-maroon);
+}
+
+.strategy-card p,
+.st-bullets li {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.st-bullets {
+    list-style: none;
+    padding: 0;
+}
+
+.st-bullets li::before {
+    content: "✦";
+    color: var(--gold);
+    margin-left: 8px;
+}
+
+[lang="en"] .st-bullets li::before {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+/* التجاوب للجوال */
+@media (max-width: 992px) {
+    .about-top-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .strategy-grid-unified {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* 2 في الصف للتابلت */
+}
+
+@media (max-width: 768px) {
+    .strategy-grid-unified {
+        grid-template-columns: 1fr;
+    }
+
+    /* 1 في الصف للجوال */
+    .fast-check-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- تنسيق قسم نبذة عنا --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text-content {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.about-visual {
+    flex: 0.8;
+    min-width: 350px;
+}
+
+.sub-title {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.text-maroon {
+    color: var(--primary-maroon);
+}
+
+.main-p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.secondary-p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* قائمة الالتزامات */
+.commitments-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* صفين بجانب بعض */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.commitments-list li {
+    font-weight: bold;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.commitments-list li i {
+    color: var(--primary-maroon);
+    font-size: 18px;
+}
+
+/* زر اقرأ المزيد */
+.read-more-btn {
+    text-decoration: none;
+    color: var(--primary-maroon);
+    font-weight: 800;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.read-more-btn:hover {
+    gap: 15px;
+    color: var(--gold);
+}
+
+/* تنسيق الصورة والبادج */
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0 var(--beige);
+    /* حركة جمالية خلف الصورة */
+}
+
+.exp-box {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--primary-maroon);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.exp-box .number {
+    font-size: 30px;
+    font-weight: 900;
+    display: block;
+    line-height: 1;
+}
+
+.exp-box .text {
+    font-size: 12px;
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+    .commitments-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        text-align: center;
+    }
+
+    .commitments-list li {
+        justify-content: center;
+    }
+
+    .exp-box {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+
+
+
+
+
+/* --- تنسيق قسم العملاء --- */
+.clients-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 أعمدة متساوية في الديسكتوب */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.client-item {
+    background: #fff;
+    padding: 35px 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+
+    /* --- إضافة الظل هنا --- */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-item:hover {
+    transform: translateY(-10px);
+    /* حركة صعود خفيفة عند الوقوف بالماوس */
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    /* تفتيح الظل عند الهوفر */
+}
+
+.client-item .c-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-maroon);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+}
+
+.client-item h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--primary-maroon);
+}
+
+.client-item p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* --- تنسيق الفوتر الاحترافي --- */
+.main-footer {
+    background: #111;
+    color: #bbb;
+    padding: 80px 0 0;
+}
+
+.footer-grid-pro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+    /* توزيع أعمدة الفوتر */
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+}
+
+[lang="en"] .footer-col h4::after {
+    right: auto;
+    left: 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold);
+    padding-right: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: var(--gold);
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.vision-img-f {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* جعل اللوجو أبيض ليليق بالفوتر */
+.footer-logo {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.copyright-bar {
+    background: #000;
+    padding: 20px 0;
+    border-top: 1px solid #222;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* --- التجاوب للجوال --- */
+@media (max-width: 992px) {
+    .clients-grid-modern {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid-pro {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .clients-grid-modern {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid-pro {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact-item,
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* --- تنسيق القائمة المنسدلة --- */
+.nav-links li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-maroon);
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-top: 2px solid var(--gold);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--gold);
+    color: var(--primary-maroon);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- تحسين شكل كروت الخدمات في الصفحة الرئيسية --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.s-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    transition: 0.4s all ease;
+    cursor: pointer;
+    text-decoration: none;
+    /* لأن الكارت سيكون رابطاً */
+    display: block;
+}
+
+.s-card:hover {
+    background: var(--primary-maroon);
+    border-color: var(--gold);
+    transform: translateY(-15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.s-icon {
+    font-size: 50px;
+    color: var(--gold);
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.s-card:hover .s-icon {
+    transform: scale(1.2);
+    color: white;
+}
+
+.s-card h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.s-card p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+
+    /* زر التلات شرطات */
+    .menu-toggle {
+        display: block !important;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+        /* فوق كل شيء */
+    }
+
+    /* القائمة الجانبية في الموبايل */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* مخفية تماماً جهة اليمين */
+        width: 280px;
+        height: 100vh;
+        background: var(--primary-maroon);
+        padding: 80px 20px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: block !important;
+        /* لضمان الظهور */
+    }
+
+    /* لما القائمة تتفعل */
+    nav.active {
+        right: 0;
+        /* تظهر في الشاشة */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* القائمة المنسدلة في الموبايل */
+    .dropdown-content {
+        position: static;
+        background: rgba(0, 0, 0, 0.2);
+        display: none;
+        /* تفتح بالضغط في الموبايل */
+        box-shadow: none;
+    }
+
+    .dropdown-content.show {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        /* طول القائمة هو طول الشاشة */
+        background: var(--primary-maroon);
+        padding: 80px 20px 50px 20px;
+        /* أضفنا padding في الأسفل */
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+
+        /* --- الحل هنا --- */
+        overflow-y: auto;
+        /* تفعيل السكرول الرأسي */
+        overflow-x: hidden;
+        /* منع السكرول الأفقي */
+    }
+
+    /* تحسين شكل السكرول بار ليكون أنيقاً وغير مزعج */
+    nav::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    nav::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        /* لضمان تمدد القائمة حسب المحتوى */
+    }
+
+    /* لضمان أن القائمة المنسدلة لا تسبب مشاكل في العرض */
+    .dropdown-content {
+        position: static;
+        /* جعلها تدفع العناصر لأسفل بدلاً من الطفو فوقها */
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+    }
+}
+
+.services-section {
+    background-color: #0f0f0f;
+    padding-bottom: 100px;
+}
+
+.services-grid {
+    display: grid;
+    /* 4 أعمدة في الشاشات الكبيرة */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.s-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 35px 20px;
+    text-align: center;
+    text-decoration: none;
+    /* حذف الخط من الروابط */
+    transition: 0.4s all ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s-card:hover {
+    background: var(--primary-maroon);
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.s-icon {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.s-card:hover .s-icon {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.s-card h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.s-card p {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* التجاوب للموبايل والتابلت */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .s-card {
+        padding: 30px 15px;
+    }
+}
+
+/* --- تنسيقات الصفحات الداخلية --- */
+.inner-hero {
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.inner-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.service-main-content {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.service-desc-box {
+    background: #fdfdfd;
+    padding: 40px;
+    border-radius: 20px;
+    border-right: 5px solid var(--gold);
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.service-desc-box h2 {
+    color: var(--primary-maroon);
+    margin-bottom: 20px;
+}
+
+.service-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.service-list li {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.service-list li i {
+    color: var(--gold);
+}
+
+.gallery-section {
+    padding-bottom: 80px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* حل مشكلة اختفاء المحتوى تحت الهيدر */
+body {
+    padding-top: 80px;
+    /* نفس ارتفاع الهيدر تقريباً */
+}
+
+/* تنسيق عام لصور المعرض لضمان ظهورها حتى لو لم توجد صورة */
+.gallery-item {
+    background: #eee;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}

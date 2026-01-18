@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنظمة الأمنية والتقنية | نيون الطيف</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="inner-page">
+
+     <header class="main-header">
+        <div class="container navbar">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="images/logo.png" alt="نيون الطيف">
+                <div class="logo-text">
+                    <h1>نيون الطيف</h1><span>للمقاولات</span>
+                </div>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="general-contracting.html">المقاولات العامة</a></li>
+                            <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
+                            <li><a href="decoration.html">أعمال الديكورات</a></li>
+                            <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#vision">رؤية 2030</a></li>
+                    <li><button id="langSwitcher" class="lang-btn">English</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+    <section class="inner-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2000') center/cover;">
+        <div class="container">
+            <h1 class="lang-ar">أعمال الأنظمة الأمنية والتقنية</h1>
+            <h1 class="lang-en">Security & Technical Systems</h1>
+        </div>
+    </section>
+
+    <main class="section-padding container">
+        <div class="service-desc-box reveal active">
+            <h2 class="lang-ar">أمان ذكي <span class="gold-text">وتحكم كامل</span></h2>
+            <h2 class="lang-en">Smart Security <span class="gold-text">& Full Control</span></h2>
+            <p class="lang-ar">نقدم حلولاً أمنية وتقنية متطورة للمباني والمنشآت، تشمل المراقبة والتحكم في الدخول والأنظمة الذكية المتكاملة بأعلى معايير الدقة.</p>
+            <p class="lang-en">We provide advanced security and technical solutions including surveillance, access control, and integrated smart home systems.</p>
+            
+            <ul class="service-list">
+                <li><i class="fas fa-video"></i> <span class="lang-ar">تركيب كاميرات المراقبة (CCTV) الحديثة</span><span class="lang-en">Modern CCTV Surveillance Systems</span></li>
+                <li><i class="fas fa-id-card"></i> <span class="lang-ar">أنظمة التحكم بالدخول وإدارة الوصول (Access Control)</span><span class="lang-en">Entry & Access Control Systems</span></li>
+                <li><i class="fas fa-fingerprint"></i> <span class="lang-ar">أنظمة البصمة والتعرف على الهوية البيومترية</span><span class="lang-en">Biometric & Fingerprint Systems</span></li>
+                <li><i class="fas fa-phone-volume"></i> <span class="lang-ar">تركيب أنظمة الإنتركم والتواصل الداخلي</span><span class="lang-en">Intercom & Internal Communication</span></li>
+                <li><i class="fas fa-network-wired"></i> <span class="lang-ar">تنفيذ شبكات الاتصالات والإنترنت المتطورة</span><span class="lang-en">Telecommunication & IT Networks</span></li>
+                <li><i class="fas fa-tablet-alt"></i> <span class="lang-ar">أنظمة المنازل الذكية (Smart Home) والتحكم</span><span class="lang-en">Smart Home Systems & Automation</span></li>
+            </ul>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="text-center lang-ar">صور من حلولنا الأمنية</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/sec1.jpg" alt="Surveillance"></div>
+                <div class="gallery-item"><img src="images/sec2.jpg" alt="Smart Home"></div>
+                <div class="gallery-item"><img src="images/sec3.jpg" alt="Access"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

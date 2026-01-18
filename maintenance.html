@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+<head>
+    <meta charset="UTF-8">
+    <title>الصيانة والتشغيل | نيون الطيف</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="inner-page">
+     <header class="main-header">
+        <div class="container navbar">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="images/logo.png" alt="نيون الطيف">
+                <div class="logo-text">
+                    <h1>نيون الطيف</h1><span>للمقاولات</span>
+                </div>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">خدماتنا <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="general-contracting.html">المقاولات العامة</a></li>
+                            <li><a href="structural-works.html">الأعمال الإنشائية</a></li>
+                            <li><a href="decoration.html">أعمال الديكورات</a></li>
+                            <li><a href="interior-finishing.html">التشطيبات الداخلية</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#vision">رؤية 2030</a></li>
+                    <li><button id="langSwitcher" class="lang-btn">English</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+    <section class="inner-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2000') center/cover;">
+        <div class="container">
+            <h1 class="lang-ar">أعمال الصيانة والتشغيل</h1>
+            <h1 class="lang-en">Maintenance & Operations</h1>
+        </div>
+    </section>
+
+    <main class="section-padding container">
+        <div class="service-desc-box reveal active">
+            <h2 class="lang-ar">نحافظ على <span class="gold-text">قيمة استثماراتكم</span></h2>
+            <h2 class="lang-en">Preserving <span class="gold-text">Your Investment Value</span></h2>
+            <p class="lang-ar">نضمن استمرارية كفاءة مبانيكم من خلال خدمات الصيانة المتكاملة والتشغيل الاحترافي وفق أعلى المعايير الفنية.</p>
+            <p class="lang-en">Ensuring continuous efficiency of your buildings through integrated maintenance and professional operation.</p>
+            
+            <ul class="service-list">
+                <li><i class="fas fa-wrench"></i> <span class="lang-ar">تنفيذ الصيانة العامة والمباني والمرافق</span><span class="lang-en">General Building & Facility Maintenance</span></li>
+                <li><i class="fas fa-faucet"></i> <span class="lang-ar">صيانة الشبكات الكهربائية والسباكة والمياه</span><span class="lang-en">Plumbing & Electrical Network Repair</span></li>
+                <li><i class="fas fa-fan"></i> <span class="lang-ar">صيانة أنظمة التكييف والتهوية (HVAC)</span><span class="lang-en">HVAC Systems Maintenance</span></li>
+                <li><i class="fas fa-paint-roller"></i> <span class="lang-ar">صيانة الواجهات والتشطيبات الداخلية والخارجية</span><span class="lang-en">Facade & Finishings Maintenance</span></li>
+                <li><i class="fas fa-file-contract"></i> <span class="lang-ar">إعداد وتنفيذ عقود التشغيل الدورية والموسمية</span><span class="lang-en">Periodic & Seasonal Operation Contracts</span></li>
+                <li><i class="fas fa-user-shield"></i> <span class="lang-ar">إدارة فرق الصيانة وضبط جودة الأداء</span><span class="lang-en">Maintenance Team Management & QC</span></li>
+            </ul>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="text-center lang-ar">خدمات الصيانة الميدانية</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/maint1.jpg" alt="Repair"></div>
+                <div class="gallery-item"><img src="images/maint2.jpg" alt="Check"></div>
+                <div class="gallery-item"><img src="images/maint3.jpg" alt="Fix"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
