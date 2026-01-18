@@ -398,6 +398,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .section-padding {
+    margin-top: 70px;
+}
     .hero-content h2 {
         font-size: 2.2rem;
     }
