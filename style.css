@@ -74,7 +74,7 @@ body {
 
 .logo-text h1 {
     color: #fff;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1;
 }
 
@@ -119,6 +119,9 @@ body {
 @media (max-width: 992px) {
     .nav-links {
         display: none;
+    }
+    .logo-text h1{
+        font-size: 18px;
     }
 
     /* إخفاء الروابط في الجوال لتظهر بالضغط */
@@ -502,7 +505,7 @@ body {
 }
 
 .main-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     line-height: 1.3;
 }
@@ -1492,8 +1495,7 @@ body {
     }
 
     .footer-col h4::after {
-        left: 50%;
-        transform: translateX(-50%);
+        display:none;
     }
 
     .contact-item,
@@ -2069,5 +2071,355 @@ body {
     
     .copyright-bar p {
         font-size: 13px;
+    }
+}
+/* تنسيق موحد لرؤوس البطاقات (العنوان + الأيقونة) */
+.st-header {
+    display: flex;
+    align-items: center; /* توسيط رأسي */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* توحيد مقاس الأيقونات */
+.st-header i {
+    width: 50px;           /* عرض ثابت للدائرة */
+    height: 50px;          /* ارتفاع ثابت للدائرة */
+    background-color: var(--light); 
+    color: var(--primary-maroon); /* لون الأيقونة */
+    border-radius: 50%;    /* جعلها دائرية */
+    display: flex;
+    align-items: center;   /* توسيط الأيقونة داخل الدائرة */
+    justify-content: center;
+    font-size: 24px;       /* حجم الأيقونة الداخلي موحد للكل */
+    flex-shrink: 0;        /* منع الدائرة من الانضغاط إذا كان النص طويلاً */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* إطار ذهبي خفيف */
+    transition: 0.3s;
+}
+
+/* تأثير عند مرور الماوس على الكرت */
+.strategy-card:hover .st-header i {
+    background-color: var(--gold);
+    color: #fff;
+    transform: rotateY(360deg); /* حركة دورانية خفيفة */
+}
+
+.st-header h4 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary-maroon);
+}
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.org-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--gold);
+    transition: 0.3s;
+}
+
+.org-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.org-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+/* --- تنسيق رابط اطلب الخدمة تحت كل كارت --- */
+.order-service-btn {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0; /* خط فاصل خفيف */
+    width: 100%;
+}
+
+.order-service-btn span {
+    color: var(--primary-maroon); /* لون العنابي الرسمي */
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s all ease;
+}
+
+/* حركة السهم عند تمرير الماوس على الكارت بالكامل */
+.s-card:hover .order-service-btn span {
+    color: var(--gold); /* يتغير للذهبي عند الهوفر */
+    gap: 15px; /* يبتعد السهم قليلاً ليعطي إيحاء بالحركة */
+}
+
+.order-service-btn i {
+    font-size: 13px;
+}
+/* --- تنسيق قسم كيف نعمل --- */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 خطوات بجانب بعض */
+    gap: 30px;
+    margin-top: 60px;
+    position: relative;
+}
+
+.process-item {
+    text-align: center;
+    position: relative;
+}
+
+.process-icon-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+}
+
+.p-icon {
+    width: 100%;
+    height: 100%;
+    background-color: var(--gold); /* لون ذهبي كما في الصورة */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--primary-maroon); /* أيقونة عنابية */
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.step-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-maroon);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+    border: 3px solid #fff;
+}
+
+/* عكس مكان الرقم في اللغة الإنجليزية */
+[lang="en"] .step-number {
+    right: auto;
+    left: 0;
+}
+
+.process-item h3 {
+    font-size: 20px;
+    color: var(--primary-maroon);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.process-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* تأثير عند المرور بالماوس */
+.process-item:hover .p-icon {
+    transform: rotateY(180deg);
+    background-color: var(--primary-maroon);
+    color: #fff;
+}
+
+/* التجاوب للجوال */
+@media (max-width: 992px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 في الصف للتابلت */
+    }
+}
+
+@media (max-width: 576px) {
+    .process-grid {
+        grid-template-columns: 1fr; /* 1 في الصف للجوال */
+    }
+}
+/* --- تنسيق أزرار التواصل الكبسولية --- */
+.floating-contact-bar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 10000;
+    align-items: flex-end; /* محاذاة لليمين في العربي */
+}
+
+/* عكس الاتجاه في الإنجليزي */
+[lang="en"] .floating-contact-bar {
+    right: auto;
+    left: 30px;
+    align-items: flex-start;
+}
+
+.contact-pill {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px; /* شكل الكبسولة */
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 180px; /* عرض أدنى لتبدو كشريط */
+    justify-content: center;
+}
+
+/* زر الهاتف (لون عنابي المجموعة) */
+.phone-pill {
+    background-color: var(--primary-maroon);
+}
+
+/* زر الواتساب (لون أخضر) */
+.whatsapp-pill {
+    background-color: #25d366;
+}
+
+/* زر اللغة (دائري أو كبسولة صغيرة) */
+.lang-pill {
+    background-color: var(--gold);
+    min-width: auto;
+    width: 60px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pill-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pill-content i {
+    font-size: 20px;
+}
+
+/* تأثيرات الحركة */
+.contact-pill:hover {
+    transform: scale(1.05) translateX(-5px);
+}
+
+[lang="en"] .contact-pill:hover {
+    transform: scale(1.05) translateX(5px);
+}
+
+/* ضبط الجوال */
+@media (max-width: 768px) {
+    .contact-pill {
+        padding: 8px 15px;
+        min-width: 150px;
+        font-size: 13px;
+    }
+    .pill-content { gap: 8px; }
+    .pill-content i { font-size: 16px; }
+}
+/* --- أنيميشن الاهتزاز (Vibration) --- */
+@keyframes shake-pill {
+    0% { transform: translateX(0); }
+    5% { transform: translateX(-5px) rotate(-2deg); }
+    10% { transform: translateX(5px) rotate(2deg); }
+    15% { transform: translateX(-5px) rotate(-2deg); }
+    20% { transform: translateX(5px) rotate(2deg); }
+    25% { transform: translateX(0); }
+    100% { transform: translateX(0); } /* توقف مؤقت لراحة العين */
+}
+
+/* --- أنيميشن النبض الضوئي (Neon Glow) --- */
+@keyframes glow-pulse {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+}
+
+/* تطبيق الأنيميشن على الأزرار الكبسولية */
+.contact-pill {
+    animation: shake-pill 4s ease-in-out infinite; /* اهتزاز كل 4 ثواني */
+    transition: 0.3s;
+}
+
+/* زر الهاتف (نبض عنابي) */
+.phone-pill {
+    background-color: var(--primary-maroon);
+    animation: shake-pill 4s ease-in-out infinite, glow-pulse 2s infinite;
+}
+
+/* زر الواتساب (نبض أخضر) */
+.whatsapp-pill {
+    background-color: #25d366;
+    animation: shake-pill 4s ease-in-out infinite 1s; /* تأخير ثانية لعمل تتابع */
+}
+
+/* جعل الأيقونة نفسها تتحرك بشكل مستقل داخل الزر */
+.pill-content i {
+    animation: icon-bounce 2s infinite;
+}
+
+@keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+/* توقف الأنيميشن عند وضع الماوس (Hover) لراحة المستخدم */
+.contact-pill:hover {
+    animation-play-state: paused;
+    transform: scale(1.1) !important;
+}
+/* --- تنسيق الشعار الأبيض الكبير في الفوتر --- */
+.footer-logo-white {
+    width: 118px; /* تكبير الشعار */
+    height: auto;
+    margin-bottom: 15px;
+    /* تحويل أي شعار ملون إلى أبيض صريح */
+    filter: brightness(0) invert(1); 
+    display: block;
+}
+
+/* تنسيق الجملة تحت الشعار */
+.footer-slogan {
+    font-size: 18px; /* تكبير الخط قليلاً */
+    color: #ffffff !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* محاذاة الفوتر في الموبايل ليبقى الشعار في المنتصف */
+@media (max-width: 768px) {
+    .footer-logo-white {
+        margin: 0 auto 15px;
+    }
+    .footer-slogan {
+        text-align: center;
+    }
+    .lang-pill {
+        min-width: 100px !important;
+        font-size: 14px !important;
     }
 }

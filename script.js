@@ -44,19 +44,36 @@ document.addEventListener('DOMContentLoaded', () => {
     reveal(); // لتفعيل العناصر الظاهرة عند التحميل
 
 
-    // --- 3. معالجة نموذج الطلب (WhatsApp Integration) ---
+    // --- معالجة نموذج الطلب (إرسال إلى الواتساب) ---
     const leadForm = document.getElementById('leadForm');
-    leadForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('userName').value;
-        const phone = document.getElementById('userPhone').value;
 
-        const message = `طلب عرض سعر جديد:\nالاسم: ${name}\nالجوال: ${phone}`;
-        const whatsappUrl = `https://wa.me/9665XXXXXXXX?text=${encodeURIComponent(message)}`;
+    if (leadForm) {
+        leadForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // منع الصفحة من التحديث
 
-        window.open(whatsappUrl, '_blank');
-        leadForm.reset();
-    });
+            // 1. سحب البيانات من الخانات
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+
+            // 2. رقم الواتساب الخاص بك (اكتبه بالصيغة الدولية بدون أصفار أو علامة +)
+            // مثال: 9665XXXXXXXX
+            const adminPhoneNumber = "966536501749";
+
+            // 3. تجهيز نص الرسالة
+            const message = `طلب عرض سعر جديد من الموقع:%0A` +
+                `*الاسم:* ${name}%0A` +
+                `*الجوال:* ${phone}`;
+
+            // 4. إنشاء رابط الواتساب
+            const whatsappUrl = `https://wa.me/${adminPhoneNumber}?text=${message}`;
+
+            // 5. فتح الرابط في نافذة جديدة
+            window.open(whatsappUrl, '_blank');
+
+            // تصفير الفورم بعد الإرسال
+            leadForm.reset();
+        });
+    }
 
     // --- 4. تأثير حركة الهيدر ---
     window.addEventListener('scroll', () => {
@@ -79,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
+
             // تغيير شكل الأيقونة من (تلات شرطات) لـ (X)
             const icon = menuBtn.querySelector('i');
             icon.classList.toggle('fa-bars');
@@ -108,3 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+function orderViaWhatsApp(serviceName) {
+    const phoneNumber = "966536501749"; // رقم الواتساب الخاص بك
+    const message = `السلام عليكم، أريد طلب خدمة: (${serviceName})`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+}
