@@ -131,3 +131,93 @@ function orderViaWhatsApp(serviceName) {
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    const slideSound = document.getElementById('slideSound');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    const intervalTime = 5000; // 5 ثواني
+
+    function updateSlider() {
+        // إزالة كلاس النشاط من الجميع
+        slides.forEach(s => s.classList.remove('active'));
+        
+        // الانتقال للصورة التالية
+        currentSlide = (currentSlide + 1) % totalSlides;
+        
+        // حساب مسافة التحرك لليسار
+        // في المواقع العربية (RTL)، التحريك الموجب يدفع العنصر لليمين ليظهر ما على يساره
+        const movePercentage = currentSlide * (100 / totalSlides);
+        track.style.transform = `translateX(${movePercentage}%)`;
+        
+        // إضافة كلاس النشاط للصورة الجديدة لبدء الزووم
+        slides[currentSlide].classList.add('active');
+
+        // تشغيل صوت الـ Whoosh
+        if (slideSound) {
+            slideSound.volume = 0.15; // صوت هادئ
+            slideSound.currentTime = 0;
+            slideSound.play().catch(() => { /* منع خطأ المتصفح قبل التفاعل */ });
+        }
+    }
+
+    // تشغيل السلايدر
+    setInterval(updateSlider, intervalTime);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    const slideSound = document.getElementById('slideSound');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let audioAllowed = false;
+
+    // تفعيل الصوت تلقائياً عند أول حركة للمستخدم (سكرول أو تحريك ماوس)
+    const enableAudio = () => {
+        if (!audioAllowed) {
+            slideSound.play().then(() => {
+                slideSound.pause();
+                slideSound.currentTime = 0;
+                audioAllowed = true;
+            }).catch(() => {});
+            // حذف المستمعات بعد التفعيل لمرة واحدة
+            ['mousedown', 'mousemove', 'touchstart', 'scroll'].forEach(e => 
+                window.removeEventListener(e, enableAudio));
+        }
+    };
+    ['mousedown', 'mousemove', 'touchstart', 'scroll'].forEach(e => 
+        window.addEventListener(e, enableAudio));
+
+    function moveSlider() {
+        // إزالة حالة النشاط
+        slides.forEach(s => s.classList.remove('active'));
+
+        // تشغيل الصوت الرسمي (بالتزامن مع بداية الحركة)
+        if (audioAllowed && slideSound) {
+            slideSound.volume = 0.3; // درجة صوت متوسطة وفخمة
+            slideSound.currentTime = 0;
+            slideSound.play();
+        }
+
+        // الحركة لليسار
+        currentSlide = (currentSlide + 1) % totalSlides;
+        const moveDistance = currentSlide * (100 / totalSlides);
+        track.style.transform = `translateX(${moveDistance}%)`;
+
+        // إضافة حالة النشاط لبدء الزووم البطئ
+        slides[currentSlide].classList.add('active');
+    }
+
+    // وقت التبديل (5 ثواني)
+    setInterval(moveSlider, 5000);
+});
+
+
+

@@ -67,8 +67,74 @@
 
     <!-- قسم الواجهة مع الخلفية المتحركة -->
     <section id="home" class="hero-section">
-        <!-- هذه الطبقة هي التي ستحتوي على الصورة وتتحرك -->
-        <div class="hero-bg"></div>
+        <div class="hero-slider">
+            <div class="slider-track" id="sliderTrack">
+                <!-- الصورة الأولى -->
+                <div class="slide active">
+                    <div class="slide-img" style="background-image: url('images/المقاولات\ العامة.jpeg');"></div>
+                </div>
+                <!-- الصورة الثانية -->
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ التشطيبات\ الداخلية.jpeg');">
+                    </div>
+                </div>
+                <!-- الصورة الثالثة -->
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ التشطيبات\ الخارجية.jpeg');">
+                    </div>
+                </div>
+                <!-- <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/الاعمال\ الانشائية.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الديكورات.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الحدائق\ واللاندسكيب.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الانظمة\ الامنية.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الطرق\ والبنية\ التحتية.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ التكييف\ والتهوية.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الحديد\ والالمنيوم.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ السباكه.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img"
+                        style="background-image: url('images/اعمال\ السلامة\ ومكافحة\ الحريق.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الكهرباء.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/اعمال\ الصيانة\ والتشغيل.jpeg');">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img" style="background-image: url('images/الاعمال\ المتخصصة\ الاضافية.jpeg');">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
         <div class="hero-overlay"></div>
 
         <div class="hero-content container">
@@ -79,6 +145,11 @@
                 <a href="#services" class="btn-outline lang-ar">استكشف أعمالنا</a>
             </div>
         </div>
+
+        <!-- صوت الحركة -->
+        <audio id="slideSound" preload="auto">
+            <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+        </audio>
     </section>
 
     <!-- نموذج طلب عرض سعر المطور -->
