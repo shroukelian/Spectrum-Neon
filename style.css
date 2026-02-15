@@ -2581,3 +2581,72 @@ body {
     color: #fff;
 }
 
+
+
+
+
+
+/* تنسيق الكروت العام */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch; /* لجعل كل الكروت بنفس الطول */
+}
+
+.s-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+/* الأيقونة والعناوين */
+.s-icon {
+    font-size: 40px;
+    color: #8B2331; /* لون العنابي الخاص بكم */
+    margin-bottom: 15px;
+}
+
+.s-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.s-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    min-height: 45px; /* توحيد مساحة النص */
+}
+
+
+
+/* زر اطلب الخدمة في أسفل الكارت دائماً */
+.order-service-btn {
+    margin-top: auto; /* هذا السطر يدفع الزر للأسفل مهما كان طول الكلام */
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.order-service-btn span {
+    color: #8B2331;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.s-card:hover .order-service-btn span {
+    transform: translateX(-5px); /* حركة السهم */
+    color: #d4af37; /* يقلب ذهبي عند الهوفر */
+}
