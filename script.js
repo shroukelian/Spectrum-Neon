@@ -221,3 +221,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    function moveSlider() {
+        // إزالة الكلاس النشط من الجميع
+        slides.forEach(slide => slide.classList.remove('active'));
+
+        // زيادة رقم الصورة
+        currentSlide++;
+
+        // إذا وصلنا لآخر صورة نعود للأولى
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        // حساب مسافة التحريك (بما أن الموقع RTL، القيم الموجبة ستحرك لليسار)
+        const offset = currentSlide * 100;
+        track.style.transform = `translateX(${offset}%)`;
+
+        // إضافة الكلاس النشط للصورة الجديدة لبدء الزووم
+        slides[currentSlide].classList.add('active');
+    }
+
+    // التغيير كل 5 ثواني
+    setInterval(moveSlider, 5000);
+});
