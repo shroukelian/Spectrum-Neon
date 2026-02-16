@@ -221,4 +221,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length; // سيحسب الـ 3 صور
 
+    function moveSlider() {
+        // حذف حالة النشاط (الزووم)
+        slides.forEach(s => s.classList.remove('active'));
+
+        // زيادة العداد
+        currentSlide++;
+
+        // العودة للبداية
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        // بما أن الحاوية LTR، نستخدم السالب للتحريك لليسار
+        // الصورة 0 -> 0%
+        // الصورة 1 -> -33.33%
+        // الصورة 2 -> -66.66%
+        const movePercentage = currentSlide * (100 / totalSlides);
+        track.style.transform = `translateX(-${movePercentage}%)`;
+
+        // تفعيل الزووم للصورة الحالية
+        slides[currentSlide].classList.add('active');
+    }
+
+    // تبديل كل 5 ثواني
+    setInterval(moveSlider, 5000);
+});

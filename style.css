@@ -120,7 +120,8 @@ body {
     .nav-links {
         display: none;
     }
-    .logo-text h1{
+
+    .logo-text h1 {
         font-size: 18px;
     }
 
@@ -402,8 +403,9 @@ body {
 
 @media (max-width: 768px) {
     .section-padding {
-    margin-top: 70px;
-}
+        margin-top: 70px;
+    }
+
     .hero-content h2 {
         font-size: 2.2rem;
     }
@@ -1495,7 +1497,7 @@ body {
     }
 
     .footer-col h4::after {
-        display:none;
+        display: none;
     }
 
     .contact-item,
@@ -1865,39 +1867,45 @@ body {
 .gallery-item img:hover {
     transform: scale(1.05);
 }
+
 /* --- تنسيق قسم الخدمات (خلفية بيضاء) --- */
 .services-section {
-    background-color: #ffffff !important; /* خلفية بيضاء صريحة */
+    background-color: #ffffff !important;
+    /* خلفية بيضاء صريحة */
     padding: 100px 0;
     position: relative;
 }
 
 /* تعديل عناوين القسم لتناسب الخلفية البيضاء */
 .services-section .gold-text {
-    color: var(--primary-maroon) !important; /* جعل العنوان بالعنابي ليبرز فوق الأبيض */
+    color: var(--primary-maroon) !important;
+    /* جعل العنوان بالعنابي ليبرز فوق الأبيض */
     font-weight: 800;
 }
 
 .services-section p {
-    color: #666 !important; /* نص رمادي مريح للعين */
+    color: #666 !important;
+    /* نص رمادي مريح للعين */
 }
 
 .gold-divider {
-    background: var(--gold) !important; /* التأكد من أن الفاصل باللون الذهبي */
+    background: var(--gold) !important;
+    /* التأكد من أن الفاصل باللون الذهبي */
 }
 
 /* تنسيق الكروت لتظهر بظلال ناعمة فوق الخلفية البيضاء */
 .s-card {
     background: #ffffff !important;
-    border: 1px solid #f5f5f5 !important; /* إطار خفيف جداً */
+    border: 1px solid #f5f5f5 !important;
+    /* إطار خفيف جداً */
     border-radius: 25px !important;
     padding: 45px 25px;
     text-align: center;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    
+
     /* ظل ناعم جداً يعطي طابع الـ (Luxury) */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1906,14 +1914,16 @@ body {
 /* أيقونة الخدمة */
 .s-icon {
     font-size: 50px;
-    color: var(--primary-maroon) !important; /* الأيقونة بلون المؤسسة الرسمي */
+    color: var(--primary-maroon) !important;
+    /* الأيقونة بلون المؤسسة الرسمي */
     margin-bottom: 25px;
     transition: 0.4s;
 }
 
 /* عنوان الخدمة */
 .s-card h3 {
-    color: #1a1a1a !important; /* أسود خفيف فخم */
+    color: #1a1a1a !important;
+    /* أسود خفيف فخم */
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -1928,19 +1938,24 @@ body {
 
 /* --- تأثير عند مرور الماوس (Hover) --- */
 .s-card:hover {
-    transform: translateY(-12px); /* صعود الكارت */
+    transform: translateY(-12px);
+    /* صعود الكارت */
     background: #fff !important;
-    border-color: var(--gold) !important; /* تغيير لون الإطار للذهبي */
-    box-shadow: 0 25px 60px rgba(97, 21, 21, 0.1) !important; /* ظل بلون عنابي خفيف جداً */
+    border-color: var(--gold) !important;
+    /* تغيير لون الإطار للذهبي */
+    box-shadow: 0 25px 60px rgba(97, 21, 21, 0.1) !important;
+    /* ظل بلون عنابي خفيف جداً */
 }
 
 .s-card:hover .s-icon {
-    color: var(--gold) !important; /* الأيقونة تقلب ذهبي عند الهوفر */
+    color: var(--gold) !important;
+    /* الأيقونة تقلب ذهبي عند الهوفر */
     transform: scale(1.1);
 }
 
 .s-card:hover h3 {
-    color: var(--primary-maroon) !important; /* العنوان يقلب عنابي */
+    color: var(--primary-maroon) !important;
+    /* العنوان يقلب عنابي */
 }
 
 /* تحسين السكرول في الموبايل */
@@ -1948,11 +1963,13 @@ body {
     .services-section {
         padding: 60px 0;
     }
+
     .s-card {
         margin: 0 auto 20px;
         max-width: 340px;
     }
 }
+
 /* حل مشكلة اختفاء المحتوى تحت الهيدر */
 body {
     padding-top: 80px;
@@ -1968,9 +1985,10 @@ body {
     justify-content: center;
     border-radius: 15px;
 }
+
 /* --- إصلاح شامل لصفحات الخدمات على الموبايل --- */
 @media (max-width: 768px) {
-    
+
     /* 1. جعل الحاوية تأخذ عرض الشاشة بالكامل تقريباً */
     .container {
         width: 92% !important;
@@ -1990,15 +2008,18 @@ body {
     /* 3. إصلاح الصندوق الأبيض (المحتوى) */
     .service-desc-box {
         padding: 30px 15px !important;
-        margin-top: -20px !important; /* رفعه قليلاً ليتداخل مع الهيرو */
+        margin-top: -20px !important;
+        /* رفعه قليلاً ليتداخل مع الهيرو */
         border-right: none !important;
-        border-top: 5px solid var(--gold) !important; /* نقل الخط الذهبي للأعلى */
+        border-top: 5px solid var(--gold) !important;
+        /* نقل الخط الذهبي للأعلى */
         text-align: center;
     }
 
     /* 4. تحويل القائمة (النقاط) من عمودين لعمود واحد */
     .service-list {
-        grid-template-columns: 1fr !important; /* نقطة واحدة في كل سطر */
+        grid-template-columns: 1fr !important;
+        /* نقطة واحدة في كل سطر */
         gap: 10px !important;
     }
 
@@ -2010,34 +2031,42 @@ body {
 
     /* 5. تحويل معرض الصور ليكون صورة واحدة في السطر */
     .gallery-grid {
-        grid-template-columns: 1fr !important; /* صورة واحدة في السطر */
+        grid-template-columns: 1fr !important;
+        /* صورة واحدة في السطر */
         gap: 15px !important;
     }
 
     .gallery-item img {
-        height: 220px !important; /* توحيد الارتفاع ليكون مريح للعين */
+        height: 220px !important;
+        /* توحيد الارتفاع ليكون مريح للعين */
     }
 
     /* 6. توسيط العناوين */
-    .section-header h2, .section-header h3 {
+    .section-header h2,
+    .section-header h3 {
         font-size: 20px !important;
     }
 }
+
 /* --- تنسيق شريط الحقوق السفلي --- */
 .copyright-bar {
-    background: #0a0a0a; /* أسود ملكي داكن جداً */
-    color: #888; /* رمادي فاتح للنصوص الثانوية */
+    background: #0a0a0a;
+    /* أسود ملكي داكن جداً */
+    color: #888;
+    /* رمادي فاتح للنصوص الثانوية */
     padding: 25px 0;
-    border-top: 1px solid rgba(212, 175, 55, 0.2); /* خط ذهبي شفاف جداً في الأعلى */
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    /* خط ذهبي شفاف جداً في الأعلى */
     font-family: 'Almarai', sans-serif;
 }
 
 .copyright-content {
     display: flex;
-    justify-content: space-between; /* توزيع النص على الأطراف في الديسكتوب */
+    justify-content: space-between;
+    /* توزيع النص على الأطراف في الديسكتوب */
     align-items: center;
-    flex-wrap: wrap; 
-     flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .copyright-bar p {
@@ -2047,7 +2076,8 @@ body {
 }
 
 .copyright-bar strong {
-    color: var(--gold); /* تمييز اسم الشركة بالذهبي */
+    color: var(--gold);
+    /* تمييز اسم الشركة بالذهبي */
     font-weight: 700;
 }
 
@@ -2064,36 +2094,47 @@ body {
 /* --- ضبط التجاوب للموبايل --- */
 @media (max-width: 768px) {
     .copyright-content {
-        flex-direction: column; /* ترتيب رأسي في الموبايل */
+        flex-direction: column;
+        /* ترتيب رأسي في الموبايل */
         text-align: center;
         gap: 10px;
     }
-    
+
     .copyright-bar p {
         font-size: 13px;
     }
 }
+
 /* تنسيق موحد لرؤوس البطاقات (العنوان + الأيقونة) */
 .st-header {
     display: flex;
-    align-items: center; /* توسيط رأسي */
+    align-items: center;
+    /* توسيط رأسي */
     gap: 15px;
     margin-bottom: 20px;
 }
 
 /* توحيد مقاس الأيقونات */
 .st-header i {
-    width: 50px;           /* عرض ثابت للدائرة */
-    height: 50px;          /* ارتفاع ثابت للدائرة */
-    background-color: var(--light); 
-    color: var(--primary-maroon); /* لون الأيقونة */
-    border-radius: 50%;    /* جعلها دائرية */
+    width: 50px;
+    /* عرض ثابت للدائرة */
+    height: 50px;
+    /* ارتفاع ثابت للدائرة */
+    background-color: var(--light);
+    color: var(--primary-maroon);
+    /* لون الأيقونة */
+    border-radius: 50%;
+    /* جعلها دائرية */
     display: flex;
-    align-items: center;   /* توسيط الأيقونة داخل الدائرة */
+    align-items: center;
+    /* توسيط الأيقونة داخل الدائرة */
     justify-content: center;
-    font-size: 24px;       /* حجم الأيقونة الداخلي موحد للكل */
-    flex-shrink: 0;        /* منع الدائرة من الانضغاط إذا كان النص طويلاً */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* إطار ذهبي خفيف */
+    font-size: 24px;
+    /* حجم الأيقونة الداخلي موحد للكل */
+    flex-shrink: 0;
+    /* منع الدائرة من الانضغاط إذا كان النص طويلاً */
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* إطار ذهبي خفيف */
     transition: 0.3s;
 }
 
@@ -2101,7 +2142,8 @@ body {
 .strategy-card:hover .st-header i {
     background-color: var(--gold);
     color: #fff;
-    transform: rotateY(360deg); /* حركة دورانية خفيفة */
+    transform: rotateY(360deg);
+    /* حركة دورانية خفيفة */
 }
 
 .st-header h4 {
@@ -2110,6 +2152,7 @@ body {
     font-weight: 800;
     color: var(--primary-maroon);
 }
+
 .org-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2121,14 +2164,14 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border-bottom: 4px solid var(--gold);
     transition: 0.3s;
 }
 
 .org-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .org-card p {
@@ -2136,16 +2179,19 @@ body {
     color: #666;
     line-height: 1.6;
 }
+
 /* --- تنسيق رابط اطلب الخدمة تحت كل كارت --- */
 .order-service-btn {
     margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid #f0f0f0; /* خط فاصل خفيف */
+    border-top: 1px solid #f0f0f0;
+    /* خط فاصل خفيف */
     width: 100%;
 }
 
 .order-service-btn span {
-    color: var(--primary-maroon); /* لون العنابي الرسمي */
+    color: var(--primary-maroon);
+    /* لون العنابي الرسمي */
     font-weight: 800;
     font-size: 15px;
     display: flex;
@@ -2157,17 +2203,21 @@ body {
 
 /* حركة السهم عند تمرير الماوس على الكارت بالكامل */
 .s-card:hover .order-service-btn span {
-    color: var(--gold); /* يتغير للذهبي عند الهوفر */
-    gap: 15px; /* يبتعد السهم قليلاً ليعطي إيحاء بالحركة */
+    color: var(--gold);
+    /* يتغير للذهبي عند الهوفر */
+    gap: 15px;
+    /* يبتعد السهم قليلاً ليعطي إيحاء بالحركة */
 }
 
 .order-service-btn i {
     font-size: 13px;
 }
+
 /* --- تنسيق قسم كيف نعمل --- */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 خطوات بجانب بعض */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 خطوات بجانب بعض */
     gap: 30px;
     margin-top: 60px;
     position: relative;
@@ -2188,13 +2238,15 @@ body {
 .p-icon {
     width: 100%;
     height: 100%;
-    background-color: var(--gold); /* لون ذهبي كما في الصورة */
+    background-color: var(--gold);
+    /* لون ذهبي كما في الصورة */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    color: var(--primary-maroon); /* أيقونة عنابية */
+    color: var(--primary-maroon);
+    /* أيقونة عنابية */
     transition: 0.4s;
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
 }
@@ -2247,15 +2299,18 @@ body {
 /* التجاوب للجوال */
 @media (max-width: 992px) {
     .process-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 في الصف للتابلت */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 في الصف للتابلت */
     }
 }
 
 @media (max-width: 576px) {
     .process-grid {
-        grid-template-columns: 1fr; /* 1 في الصف للجوال */
+        grid-template-columns: 1fr;
+        /* 1 في الصف للجوال */
     }
 }
+
 /* --- تنسيق أزرار التواصل الكبسولية --- */
 .floating-contact-bar {
     position: fixed;
@@ -2265,7 +2320,8 @@ body {
     flex-direction: column;
     gap: 12px;
     z-index: 10000;
-    align-items: flex-end; /* محاذاة لليمين في العربي */
+    align-items: flex-end;
+    /* محاذاة لليمين في العربي */
 }
 
 /* عكس الاتجاه في الإنجليزي */
@@ -2280,12 +2336,14 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    border-radius: 50px; /* شكل الكبسولة */
+    border-radius: 50px;
+    /* شكل الكبسولة */
     color: #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
-    min-width: 180px; /* عرض أدنى لتبدو كشريط */
+    min-width: 180px;
+    /* عرض أدنى لتبدو كشريط */
     justify-content: center;
 }
 
@@ -2337,30 +2395,68 @@ body {
         min-width: 150px;
         font-size: 13px;
     }
-    .pill-content { gap: 8px; }
-    .pill-content i { font-size: 16px; }
+
+    .pill-content {
+        gap: 8px;
+    }
+
+    .pill-content i {
+        font-size: 16px;
+    }
 }
+
 /* --- أنيميشن الاهتزاز (Vibration) --- */
 @keyframes shake-pill {
-    0% { transform: translateX(0); }
-    5% { transform: translateX(-5px) rotate(-2deg); }
-    10% { transform: translateX(5px) rotate(2deg); }
-    15% { transform: translateX(-5px) rotate(-2deg); }
-    20% { transform: translateX(5px) rotate(2deg); }
-    25% { transform: translateX(0); }
-    100% { transform: translateX(0); } /* توقف مؤقت لراحة العين */
+    0% {
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(-5px) rotate(-2deg);
+    }
+
+    10% {
+        transform: translateX(5px) rotate(2deg);
+    }
+
+    15% {
+        transform: translateX(-5px) rotate(-2deg);
+    }
+
+    20% {
+        transform: translateX(5px) rotate(2deg);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+    /* توقف مؤقت لراحة العين */
 }
 
 /* --- أنيميشن النبض الضوئي (Neon Glow) --- */
 @keyframes glow-pulse {
-    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
-    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
 }
 
 /* تطبيق الأنيميشن على الأزرار الكبسولية */
 .contact-pill {
-    animation: shake-pill 4s ease-in-out infinite; /* اهتزاز كل 4 ثواني */
+    animation: shake-pill 4s ease-in-out infinite;
+    /* اهتزاز كل 4 ثواني */
     transition: 0.3s;
 }
 
@@ -2373,7 +2469,8 @@ body {
 /* زر الواتساب (نبض أخضر) */
 .whatsapp-pill {
     background-color: #25d366;
-    animation: shake-pill 4s ease-in-out infinite 1s; /* تأخير ثانية لعمل تتابع */
+    animation: shake-pill 4s ease-in-out infinite 1s;
+    /* تأخير ثانية لعمل تتابع */
 }
 
 /* جعل الأيقونة نفسها تتحرك بشكل مستقل داخل الزر */
@@ -2382,8 +2479,15 @@ body {
 }
 
 @keyframes icon-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
 }
 
 /* توقف الأنيميشن عند وضع الماوس (Hover) لراحة المستخدم */
@@ -2391,19 +2495,22 @@ body {
     animation-play-state: paused;
     transform: scale(1.1) !important;
 }
+
 /* --- تنسيق الشعار الأبيض الكبير في الفوتر --- */
 .footer-logo-white {
-    width: 118px; /* تكبير الشعار */
+    width: 118px;
+    /* تكبير الشعار */
     height: auto;
     margin-bottom: 15px;
     /* تحويل أي شعار ملون إلى أبيض صريح */
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
     display: block;
 }
 
 /* تنسيق الجملة تحت الشعار */
 .footer-slogan {
-    font-size: 18px; /* تكبير الخط قليلاً */
+    font-size: 18px;
+    /* تكبير الخط قليلاً */
     color: #ffffff !important;
     font-weight: 700;
     margin-bottom: 20px;
@@ -2415,100 +2522,103 @@ body {
     .footer-logo-white {
         margin: 0 auto 15px;
     }
+
     .footer-slogan {
         text-align: center;
     }
+
     .lang-pill {
         min-width: 100px !important;
         font-size: 14px !important;
     }
 }
 
-       /* تحسينات التصميم لقسم الفيديو والزر */
-        .video-cta-section {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-            border-radius: 20px;
-            margin: 40px 0;
-        }
+/* تحسينات التصميم لقسم الفيديو والزر */
+.video-cta-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin: 40px 0;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #8B2331;
-            /* لون الهوية العنابي */
-            font-weight: 800;
-            position: relative;
-        }
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8B2331;
+    /* لون الهوية العنابي */
+    font-weight: 800;
+    position: relative;
+}
 
-        .video-container-premium {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 15px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-            border: 1px solid #eee;
-        }
+.video-container-premium {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
 
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            background: #000;
-        }
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #000;
+}
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-        /* ستايل الزر الجديد */
-        .cta-wrapper {
-            margin-top: 40px;
-            text-align: center;
-        }
+/* ستايل الزر الجديد */
+.cta-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
 
-        .service-btn-main {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            background: linear-gradient(135deg, #8B2331 0%, #a32a3a 100%);
-            color: #fff !important;
-            padding: 18px 45px;
-            border-radius: 50px;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(139, 35, 49, 0.3);
-        }
+.service-btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #8B2331 0%, #a32a3a 100%);
+    color: #fff !important;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(139, 35, 49, 0.3);
+}
 
-        .service-btn-main:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(139, 35, 49, 0.5);
-            background: linear-gradient(135deg, #a32a3a 0%, #8B2331 100%);
-        }
+.service-btn-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(139, 35, 49, 0.5);
+    background: linear-gradient(135deg, #a32a3a 0%, #8B2331 100%);
+}
 
-        .service-btn-main i {
-            font-size: 24px;
-            color: #25D366;
-            /* لون الواتساب */
-        }
+.service-btn-main i {
+    font-size: 24px;
+    color: #25D366;
+    /* لون الواتساب */
+}
 
-        @media (max-width: 768px) {
-            .service-btn-main {
-                width: 90%;
-                justify-content: center;
-                font-size: 18px;
-            }
-        }
-        .hero-section {
+@media (max-width: 768px) {
+    .service-btn-main {
+        width: 90%;
+        justify-content: center;
+        font-size: 18px;
+    }
+}
+
+.hero-section {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -2529,27 +2639,31 @@ body {
 
 .slider-track {
     display: flex;
-    width: 300%; /* عدد الصور × 100% */
+    width: 300%;
+    /* عدد الصور × 100% */
     height: 100%;
-    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1); /* حركة انزلاق ناعمة جداً */
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    /* حركة انزلاق ناعمة جداً */
 }
 
 .slide {
-    width: 33.333%; /* كل صورة تأخذ ثلث المسار */
+    width: 33.333%;
+    /* كل صورة تأخذ ثلث المسار */
     height: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .slide-img {
-  position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     /* استبدلنا cover بـ 100% 100% لضمان ظهور الصورة كاملة، أو استخدم contain */
-    background-size: 100% 100%; 
-    background-position: center top; /* البدء من الأعلى لضمان ظهور الكلام العلوي */
+    background-size: 100% 100%;
+    background-position: center top;
+    /* البدء من الأعلى لضمان ظهور الكلام العلوي */
     background-repeat: no-repeat;
     transform: scale(1);
 }
@@ -2560,8 +2674,13 @@ body {
 }
 
 @keyframes sliderZoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.15); }
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
 }
 
 .hero-overlay {
@@ -2570,7 +2689,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* تعتيم الخلفية لتبرز الكتابة */
+    background: rgba(0, 0, 0, 0.5);
+    /* تعتيم الخلفية لتبرز الكتابة */
     z-index: 2;
 }
 
@@ -2591,7 +2711,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    align-items: stretch; /* لجعل كل الكروت بنفس الطول */
+    align-items: stretch;
+    /* لجعل كل الكروت بنفس الطول */
 }
 
 .s-card {
@@ -2601,16 +2722,18 @@ body {
     text-align: center;
     text-decoration: none;
     display: flex;
-    flex-direction: column; /* ترتيب العناصر عمودياً */
+    flex-direction: column;
+    /* ترتيب العناصر عمودياً */
     transition: 0.4s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     height: 100%;
 }
 
 /* الأيقونة والعناوين */
 .s-icon {
     font-size: 40px;
-    color: #8B2331; /* لون العنابي الخاص بكم */
+    color: #8B2331;
+    /* لون العنابي الخاص بكم */
     margin-bottom: 15px;
 }
 
@@ -2626,14 +2749,16 @@ body {
     color: #666;
     margin-bottom: 20px;
     line-height: 1.6;
-    min-height: 45px; /* توحيد مساحة النص */
+    min-height: 45px;
+    /* توحيد مساحة النص */
 }
 
 
 
 /* زر اطلب الخدمة في أسفل الكارت دائماً */
 .order-service-btn {
-    margin-top: auto; /* هذا السطر يدفع الزر للأسفل مهما كان طول الكلام */
+    margin-top: auto;
+    /* هذا السطر يدفع الزر للأسفل مهما كان طول الكلام */
     padding-top: 15px;
     border-top: 1px solid #f5f5f5;
 }
@@ -2647,10 +2772,120 @@ body {
 }
 
 .s-card:hover .order-service-btn span {
-    transform: translateX(-5px); /* حركة السهم */
-    color: #d4af37; /* يقلب ذهبي عند الهوفر */
+    transform: translateX(-5px);
+    /* حركة السهم */
+    color: #d4af37;
+    /* يقلب ذهبي عند الهوفر */
 }
 
 
 
 
+
+
+/* --- إعدادات قسم الهيرو المطور --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* نجعل اتجاه السلايدر LTR لضبط حركة الحسابات الرياضية */
+    direction: ltr !important; 
+}
+
+.slider-track {
+    display: flex;
+    width: 300%; /* لـ 3 صور فقط */
+    height: 100%;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide {
+    width: 33.333333%; /* ثلث المسار بالضبط */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* الحل النهائي للمط والبكسلة هو cover */
+    background-size: cover !important; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+}
+
+/* أنيميشن الزووم للصورة النشطة */
+.slide.active .slide-img {
+    animation: sliderZoom 10s linear forwards;
+}
+
+@keyframes sliderZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* زيادة التعتيم قليلاً لتظهر الكتابة البيضاء بوضوح */
+    background: rgba(0, 0, 0, 0.55); 
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+    width: 90%;
+}
+
+/* --- تعديلات الموبايل الاحترافية --- */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 1.8rem !important; /* تصغير العنوان ليناسب الشاشة */
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1rem !important;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column; /* جعل الأزرار تحت بعضها */
+        gap: 12px;
+        align-items: center;
+    }
+
+    .btn-gold, .btn-outline {
+        width: 85%; /* تكبير الأزرار لسهولة الضغط */
+        margin: 0 !important;
+        padding: 12px !important;
+        font-size: 16px !important;
+    }
+}
