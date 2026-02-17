@@ -2889,3 +2889,28 @@ body {
         font-size: 16px !important;
     }
 }
+
+
+
+/* تنسيق روابط التواصل في الفوتر */
+.footer-col .contact-item {
+    text-decoration: none; /* إزالة الخط تحت الرابط */
+    color: #bbb; /* اللون الرمادي الفخم للفوتر */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+/* تأثير عند تمرير الماوس */
+.footer-col .contact-item:hover {
+    color: var(--gold); /* يقلب اللون للذهبي عند الهوفر */
+    transform: translateX(-5px); /* حركة خفيفة لليمين */
+}
+
+/* لون الأيقونات */
+.footer-col .contact-item i {
+    color: var(--gold);
+    font-size: 18px;
+}

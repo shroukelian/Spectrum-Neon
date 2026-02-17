@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. تبديل اللغة ---
     const langBtn = document.getElementById('langSwitcher');
     const htmlTag = document.getElementById('mainHtml');
 
@@ -22,12 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage(currentLang === 'ar' ? 'en' : 'ar');
     });
 
-    // استرجاع اللغة المحفوظة
     const savedLang = localStorage.getItem('preferredLang') || 'ar';
     setLanguage(savedLang);
 
 
-    // --- 2. أنيميشن عند التمرير (Reveal on Scroll) ---
     const reveal = () => {
         const reveals = document.querySelectorAll('.reveal');
         reveals.forEach(el => {
@@ -41,41 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', reveal);
-    reveal(); // لتفعيل العناصر الظاهرة عند التحميل
+    reveal(); 
 
 
-    // --- معالجة نموذج الطلب (إرسال إلى الواتساب) ---
     const leadForm = document.getElementById('leadForm');
 
     if (leadForm) {
         leadForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // منع الصفحة من التحديث
+            e.preventDefault(); 
 
-            // 1. سحب البيانات من الخانات
             const name = document.getElementById('userName').value;
             const phone = document.getElementById('userPhone').value;
 
-            // 2. رقم الواتساب الخاص بك (اكتبه بالصيغة الدولية بدون أصفار أو علامة +)
-            // مثال: 9665XXXXXXXX
+
             const adminPhoneNumber = "966536501749";
 
-            // 3. تجهيز نص الرسالة
             const message = `طلب عرض سعر جديد من الموقع:%0A` +
                 `*الاسم:* ${name}%0A` +
                 `*الجوال:* ${phone}`;
 
-            // 4. إنشاء رابط الواتساب
             const whatsappUrl = `https://wa.me/${adminPhoneNumber}?text=${message}`;
 
-            // 5. فتح الرابط في نافذة جديدة
             window.open(whatsappUrl, '_blank');
 
-            // تصفير الفورم بعد الإرسال
             leadForm.reset();
         });
     }
 
-    // --- 4. تأثير حركة الهيدر ---
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.main-header');
         if (window.scrollY > 50) {
@@ -92,19 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
 
-    // 1. فتح وإغلاق القائمة عند الضغط على التلات شرطات
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
 
-            // تغيير شكل الأيقونة من (تلات شرطات) لـ (X)
             const icon = menuBtn.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
         });
     }
 
-    // 2. إغلاق القائمة عند الضغط على أي رابط بداخلها
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -115,58 +101,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. تفعيل الـ Dropdown في الموبايل عند الضغط على كلمة "خدماتنا"
     const dropdown = document.querySelector('.dropdown > a');
     if (dropdown && window.innerWidth < 992) {
         dropdown.addEventListener('click', (e) => {
-            e.preventDefault(); // منع الانتقال لصفحة تانية
+            e.preventDefault(); 
             const content = dropdown.nextElementSibling;
             content.classList.toggle('show');
         });
     }
 });
 function orderViaWhatsApp(serviceName) {
-    const phoneNumber = "966536501749"; // رقم الواتساب الخاص بك
+    const phoneNumber = "966536501749";
     const message = `السلام عليكم، أريد طلب خدمة: (${serviceName})`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const track = document.getElementById('sliderTrack');
-    const slides = document.querySelectorAll('.slide');
-    const slideSound = document.getElementById('slideSound');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const track = document.getElementById('sliderTrack');
+//     const slides = document.querySelectorAll('.slide');
+//     const slideSound = document.getElementById('slideSound');
     
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    const intervalTime = 5000; // 5 ثواني
+//     let currentSlide = 0;
+//     const totalSlides = slides.length;
+//     const intervalTime = 5000;
 
-    function updateSlider() {
-        // إزالة كلاس النشاط من الجميع
-        slides.forEach(s => s.classList.remove('active'));
+//     function updateSlider() {
+//         slides.forEach(s => s.classList.remove('active'));
         
-        // الانتقال للصورة التالية
-        currentSlide = (currentSlide + 1) % totalSlides;
+//         currentSlide = (currentSlide + 1) % totalSlides;
         
-        // حساب مسافة التحرك لليسار
-        // في المواقع العربية (RTL)، التحريك الموجب يدفع العنصر لليمين ليظهر ما على يساره
-        const movePercentage = currentSlide * (100 / totalSlides);
-        track.style.transform = `translateX(${movePercentage}%)`;
-        
-        // إضافة كلاس النشاط للصورة الجديدة لبدء الزووم
-        slides[currentSlide].classList.add('active');
 
-        // تشغيل صوت الـ Whoosh
-        if (slideSound) {
-            slideSound.volume = 0.15; // صوت هادئ
-            slideSound.currentTime = 0;
-            slideSound.play().catch(() => { /* منع خطأ المتصفح قبل التفاعل */ });
-        }
-    }
+//         const movePercentage = currentSlide * (100 / totalSlides);
+//         track.style.transform = `translateX(${movePercentage}%)`;
+        
+//         slides[currentSlide].classList.add('active');
 
-    // تشغيل السلايدر
-    setInterval(updateSlider, intervalTime);
-});
+//         if (slideSound) {
+//             slideSound.volume = 0.15; 
+//             slideSound.currentTime = 0;
+//             slideSound.play().catch(() => { /* منع خطأ المتصفح قبل التفاعل */ });
+//         }
+//     }
+
+//     setInterval(updateSlider, intervalTime);
+// });
 
 
 
@@ -179,43 +158,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalSlides = slides.length;
     let audioAllowed = false;
 
-    // تفعيل الصوت تلقائياً عند أول حركة للمستخدم (سكرول أو تحريك ماوس)
-    const enableAudio = () => {
-        if (!audioAllowed) {
-            slideSound.play().then(() => {
-                slideSound.pause();
-                slideSound.currentTime = 0;
-                audioAllowed = true;
-            }).catch(() => {});
-            // حذف المستمعات بعد التفعيل لمرة واحدة
-            ['mousedown', 'mousemove', 'touchstart', 'scroll'].forEach(e => 
-                window.removeEventListener(e, enableAudio));
-        }
-    };
-    ['mousedown', 'mousemove', 'touchstart', 'scroll'].forEach(e => 
-        window.addEventListener(e, enableAudio));
+    // const enableAudio = () => {
+    //     if (!audioAllowed) {
+    //         slideSound.play().then(() => {
+    //             slideSound.pause();
+    //             slideSound.currentTime = 0;
+    //             audioAllowed = true;
+    //         }).catch(() => {});
+    //         // حذف المستمعات بعد التفعيل لمرة واحدة
+    //         ['mousedown', 'mousemove', 'touchstart', 'scroll'].forEach(e => 
+    //             window.removeEventListener(e, enableAudio));
+    //     }
+    // };
+    // ['mousedown', 'mousemove', 'touchstart', 'scroll'].forEach(e => 
+    //     window.addEventListener(e, enableAudio));
 
     function moveSlider() {
-        // إزالة حالة النشاط
         slides.forEach(s => s.classList.remove('active'));
 
-        // تشغيل الصوت الرسمي (بالتزامن مع بداية الحركة)
         if (audioAllowed && slideSound) {
-            slideSound.volume = 0.3; // درجة صوت متوسطة وفخمة
+            slideSound.volume = 0.3; 
             slideSound.currentTime = 0;
             slideSound.play();
         }
 
-        // الحركة لليسار
         currentSlide = (currentSlide + 1) % totalSlides;
         const moveDistance = currentSlide * (100 / totalSlides);
         track.style.transform = `translateX(${moveDistance}%)`;
 
-        // إضافة حالة النشاط لبدء الزووم البطئ
         slides[currentSlide].classList.add('active');
     }
 
-    // وقت التبديل (5 ثواني)
     setInterval(moveSlider, 5000);
 });
 
@@ -226,31 +199,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     
     let currentSlide = 0;
-    const totalSlides = slides.length; // سيحسب الـ 3 صور
+    const totalSlides = slides.length; 
 
     function moveSlider() {
-        // حذف حالة النشاط (الزووم)
         slides.forEach(s => s.classList.remove('active'));
 
-        // زيادة العداد
         currentSlide++;
 
-        // العودة للبداية
         if (currentSlide >= totalSlides) {
             currentSlide = 0;
         }
 
-        // بما أن الحاوية LTR، نستخدم السالب للتحريك لليسار
-        // الصورة 0 -> 0%
-        // الصورة 1 -> -33.33%
-        // الصورة 2 -> -66.66%
         const movePercentage = currentSlide * (100 / totalSlides);
         track.style.transform = `translateX(-${movePercentage}%)`;
 
-        // تفعيل الزووم للصورة الحالية
         slides[currentSlide].classList.add('active');
     }
 
-    // تبديل كل 5 ثواني
     setInterval(moveSlider, 5000);
 });
